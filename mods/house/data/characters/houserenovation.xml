@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="0" icon="housefury" y="0" isGF="false" scale="1.6" color="#FF2020" isPlayer="false" holdTime="6.1" sprite="domrun">
+	<anim x="0" loop="false" y="0" fps="24" anim="Idle" name="idle"/>
+	<anim x="29" loop="false" y="10" fps="24" anim="Up" name="singUP"/>
+	<anim x="78" loop="false" y="-73" fps="24" anim="Left" name="singLEFT"/>
+	<anim x="-1" loop="false" y="-70" fps="24" anim="Right" name="singRIGHT"/>
+	<anim x="28" loop="false" y="-65" fps="24" anim="Down" name="singDOWN"/>
+</character>

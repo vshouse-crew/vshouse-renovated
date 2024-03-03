@@ -1,0 +1,14 @@
+{
+    "params": [
+        {
+            "name": "Bool",
+            "type": "DropDown('Off', 'On')",
+            "defaultValue": "Off"
+        },
+		{
+			"name": "Time",
+			"type": "String",
+			"defaultValue": "1"
+		}
+    ]
+}

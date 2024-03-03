@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="DistrictGFBumpFIXEDnew.png">
+	<!-- Created with Adobe Animate version 20.0.2.22168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="jajcogfleft0000" x="0" y="0" width="770" height="512" frameX="-6" frameY="-15" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfleft0001" x="770" y="0" width="782" height="512" frameX="0" frameY="-15" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfleft0002" x="1552" y="0" width="782" height="500" frameX="0" frameY="-27" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfleft0003" x="2334" y="0" width="780" height="500" frameX="-1" frameY="-27" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfleft0004" x="3114" y="0" width="780" height="523" frameX="-1" frameY="-4" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfleft0005" x="0" y="523" width="780" height="523" frameX="-1" frameY="-4" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfleft0006" x="780" y="523" width="780" height="527" frameX="-1" frameY="0" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfleft0007" x="1560" y="523" width="780" height="526" frameX="-1" frameY="-1" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfleft0008" x="2340" y="523" width="780" height="526" frameX="-1" frameY="-1" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfleft0009" x="3120" y="523" width="780" height="526" frameX="-1" frameY="-1" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfleft0010" x="0" y="1050" width="780" height="526" frameX="-1" frameY="-1" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfleft0011" x="780" y="1050" width="780" height="526" frameX="-1" frameY="-1" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfleft0012" x="1560" y="1050" width="780" height="526" frameX="-1" frameY="-1" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfleft0013" x="2340" y="1050" width="780" height="526" frameX="-1" frameY="-1" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfleft0014" x="3120" y="1050" width="770" height="520" frameX="-6" frameY="-7" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfright0000" x="0" y="1576" width="770" height="520" frameX="-6" frameY="-7" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfright0001" x="770" y="1576" width="782" height="517" frameX="0" frameY="-10" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfright0002" x="1552" y="1576" width="782" height="517" frameX="0" frameY="-10" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfright0003" x="2334" y="1576" width="780" height="523" frameX="-1" frameY="-4" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfright0004" x="3114" y="1576" width="780" height="523" frameX="-1" frameY="-4" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfright0005" x="0" y="2099" width="780" height="527" frameX="-1" frameY="0" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfright0006" x="780" y="2099" width="780" height="526" frameX="-1" frameY="-1" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfright0007" x="1560" y="2099" width="780" height="526" frameX="-1" frameY="-1" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfright0008" x="2340" y="2099" width="780" height="526" frameX="-1" frameY="-1" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfright0009" x="3120" y="2099" width="780" height="526" frameX="-1" frameY="-1" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfright0010" x="0" y="2626" width="780" height="526" frameX="-1" frameY="-1" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfright0011" x="780" y="2626" width="780" height="526" frameX="-1" frameY="-1" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfright0012" x="1560" y="2626" width="780" height="526" frameX="-1" frameY="-1" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfright0013" x="2340" y="2626" width="770" height="526" frameX="-6" frameY="-1" frameWidth="782" frameHeight="527"/>
+	<SubTexture name="jajcogfright0014" x="3110" y="2626" width="770" height="526" frameX="-6" frameY="-1" frameWidth="782" frameHeight="527"/>
+</TextureAtlas>

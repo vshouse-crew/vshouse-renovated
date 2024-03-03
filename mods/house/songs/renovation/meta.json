@@ -1,0 +1,16 @@
+{
+	"beatsPerMeasure": 4,
+	"opponentModeAllowed": true,
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"bpm": 100,
+	"difficulties": [
+		"normal"
+	],
+	"needsVoices": false,
+	"parsedColor": -61938,
+	"displayName": "renovation",
+	"icon": "houserenovation",
+	"name": "renovation",
+	"color": "#FF0E0E"
+}
