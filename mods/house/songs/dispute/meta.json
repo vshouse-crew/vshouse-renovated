@@ -1,16 +1,16 @@
 {
-	"beatsPerMeasure": 4,
 	"opponentModeAllowed": true,
-	"coopAllowed": true,
-	"stepsPerBeat": 4,
-	"bpm": 195,
+	"icon": "houseangy",
 	"difficulties": [
 		"normal"
 	],
-	"needsVoices": true,
 	"parsedColor": -458752,
-	"displayName": "Dispute",
-	"icon": "houseangy",
+	"color": "#F90000",
 	"name": "dispute",
-	"color": "#F90000"
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"displayName": "Dispute",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 195
 }
