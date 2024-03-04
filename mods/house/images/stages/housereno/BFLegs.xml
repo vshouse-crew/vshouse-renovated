@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BFLegs.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BFLegs0000" x="0" y="0" width="391" height="181" frameX="0" frameY="0" frameWidth="407" frameHeight="264"/>
+	<SubTexture name="BFLegs0001" x="0" y="0" width="391" height="181" frameX="0" frameY="0" frameWidth="407" frameHeight="264"/>
+	<SubTexture name="BFLegs0002" x="391" y="0" width="391" height="182" frameX="-2" frameY="-9" frameWidth="407" frameHeight="264"/>
+	<SubTexture name="BFLegs0003" x="0" y="182" width="323" height="182" frameX="-53" frameY="-43" frameWidth="407" frameHeight="264"/>
+	<SubTexture name="BFLegs0004" x="323" y="182" width="211" height="216" frameX="-90" frameY="-38" frameWidth="407" frameHeight="264"/>
+	<SubTexture name="BFLegs0005" x="534" y="182" width="260" height="233" frameX="-55" frameY="-28" frameWidth="407" frameHeight="264"/>
+	<SubTexture name="BFLegs0006" x="0" y="415" width="355" height="190" frameX="-32" frameY="-32" frameWidth="407" frameHeight="264"/>
+	<SubTexture name="BFLegs0007" x="355" y="415" width="392" height="185" frameX="-12" frameY="-18" frameWidth="407" frameHeight="264"/>
+	<SubTexture name="BFLegs0008" x="0" y="605" width="400" height="184" frameX="-7" frameY="-14" frameWidth="407" frameHeight="264"/>
+	<SubTexture name="BFLegs0009" x="400" y="605" width="264" height="229" frameX="-53" frameY="-35" frameWidth="407" frameHeight="264"/>
+	<SubTexture name="BFLegs0010" x="664" y="605" width="308" height="189" frameX="-60" frameY="-35" frameWidth="407" frameHeight="264"/>
+	<SubTexture name="BFLegs0011" x="391" y="0" width="391" height="182" frameX="-2" frameY="-9" frameWidth="407" frameHeight="264"/>
+</TextureAtlas>

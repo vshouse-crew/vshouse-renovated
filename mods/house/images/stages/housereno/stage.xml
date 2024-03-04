@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="stage.png"><SubTexture name="stage0000" x="0" y="3504" width="8000" height="1750" frameX="0" frameY="-2" frameWidth="8000" frameHeight="1752" />
+<SubTexture name="stage0001" x="0" y="0" width="8000" height="1752" frameX="0" frameY="0" frameWidth="8000" frameHeight="1752" />
+<SubTexture name="stage0002" x="0" y="1752" width="8000" height="1752" frameX="0" frameY="0" frameWidth="8000" frameHeight="1752" />
+<SubTexture name="stage0003" x="8000" y="6996" width="8000" height="1713" frameX="0" frameY="-39" frameWidth="8000" frameHeight="1752" />
+<SubTexture name="stage0004" x="0" y="8725" width="8000" height="1713" frameX="0" frameY="-39" frameWidth="8000" frameHeight="1752" />
+<SubTexture name="stage0005" x="8000" y="5206" width="8000" height="1729" frameX="0" frameY="-23" frameWidth="8000" frameHeight="1752" />
+<SubTexture name="stage0006" x="0" y="6996" width="8000" height="1729" frameX="0" frameY="-23" frameWidth="8000" frameHeight="1752" />
+<SubTexture name="stage0007" x="8000" y="1742" width="8000" height="1732" frameX="0" frameY="-20" frameWidth="8000" frameHeight="1752" />
+<SubTexture name="stage0008" x="8000" y="3474" width="8000" height="1732" frameX="0" frameY="-20" frameWidth="8000" frameHeight="1752" />
+<SubTexture name="stage0009" x="0" y="5254" width="8000" height="1742" frameX="0" frameY="-10" frameWidth="8000" frameHeight="1752" />
+<SubTexture name="stage0010" x="8000" y="0" width="8000" height="1742" frameX="0" frameY="-10" frameWidth="8000" frameHeight="1752" />
+</TextureAtlas>
