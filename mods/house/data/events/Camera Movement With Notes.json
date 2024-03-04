@@ -1,0 +1,9 @@
+{
+    "params": [
+        {
+            "name": "Type",
+            "type": "DropDown('On', 'Off')",
+            "defaultValue": "On"
+        }
+    ]
+}
