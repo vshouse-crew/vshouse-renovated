@@ -7,6 +7,8 @@ var LowerBar = new FlxSprite();
 var n = null;
 
 function onEvent(eventEvent) {
+	if (eventEvent.event.name == "blackbars")
+		{
 	var types = switch(eventEvent.event.params[0]){
 		case 'On': 
 			UpperBar.makeGraphic(1580, 120, FlxColor.BLACK);
@@ -45,4 +47,5 @@ function onEvent(eventEvent) {
 				}
 			}
 	};
+}
 }
