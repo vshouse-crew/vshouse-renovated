@@ -9,8 +9,9 @@
 	],
 	"needsVoices": false,
 	"parsedColor": -61167,
-	"displayName": "Display Name",
+	"displayName": "Blueprint",
 	"icon": "house",
 	"name": "blueprint",
-	"color": "#FF1111"
+	"color": "#FF1111",
+	"customValues": {}
 }

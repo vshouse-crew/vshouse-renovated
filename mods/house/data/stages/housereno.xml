@@ -8,7 +8,7 @@
 	<sprite x="-137.5" sprite="legs" y="645" scale="1.8" type="loop" name="legs"/>
 	<dad x="-149" y="198"/>
 	<sprite x="1064.5" y="685" sprite="BFLegs" type="loop" name="BFLegs"/>
-	<bf x="1105" y="440.5"/>
+	<bf x="1101" y="431.5"/>
 	<combo/>
 	<sprite x="-616" y="-286" sprite="overlay2" alpha="0.8" scale="1.5" name="overlay2"/>
 </stage>

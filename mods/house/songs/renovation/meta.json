@@ -9,8 +9,9 @@
 	],
 	"needsVoices": false,
 	"parsedColor": -61938,
-	"displayName": "renovation",
-	"icon": "houserenovation",
+	"displayName": "Renovation",
+	"icon": "housefury",
 	"name": "renovation",
-	"color": "#FF0E0E"
+	"color": "#FF0E0E",
+	"customValues": {}
 }
