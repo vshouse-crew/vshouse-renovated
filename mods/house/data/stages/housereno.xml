@@ -1,5 +1,6 @@
 <!DOCTYPE codename-engine-stage>
-<stage folder="houserun/" zoom="0.5">
+<stage folder="stages/housereno/" zoom="0.5">
+	<sprite x="-2008" y="532" sprite="kawalekpodlogi" name="kawalekpodlogi"/>
 	<gf/>
 	<dad/>
 	<bf/>
