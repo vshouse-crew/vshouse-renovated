@@ -1,8 +1,9 @@
 <!DOCTYPE codename-engine-stage>
 <stage folder="stages/housereno/" zoom="0.5">
 	<sprite x="-3482.25" y="-551" sprite="gradient" scale="1.5" name="gradient"/>
-	<sprite x="-4661.25" y="-423.5" sprite="domki" type="loop" scale="1.8" name="domki"/>
+	<sprite x="6178" y="-397.5" sprite="domki" type="loop" scale="1.8" name="domki"/>
 	<sprite scrolly="0.1" x="687.475" y="-722" sprite="ksiezycnoc" scrollx="1.7" name="ksiezycnoc"/>
+	<sprite x="-1980" sprite="kawalekpodlogi" y="702" scale="2" name="kawalekpodlogi"/>
 	<sprite x="-3577" y="-381" sprite="stage" type="loop" scale="1.4" name="stage"/>
 	<gf x="447" y="50"/>
 	<sprite x="-137.5" sprite="legs" y="645" scale="1.8" type="loop" name="legs"/>
