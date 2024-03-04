@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/gartic/" zoom="0.6">
+	<sprite x="-403" y="-242" sprite="whitescreen" scale="4" name="whitescreen"/>
+	<gf x="400" y="130"/>
+	<dad x="250" y="0"/>
+	<bf x="1120" y="1000"/>
+	<combo/>
+</stage>
