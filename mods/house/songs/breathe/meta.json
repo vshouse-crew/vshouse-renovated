@@ -1,16 +1,16 @@
 {
-	"beatsPerMeasure": 4,
 	"opponentModeAllowed": true,
-	"coopAllowed": true,
-	"stepsPerBeat": 4,
-	"bpm": 130,
+	"icon": "House",
 	"difficulties": [
 		"normal"
 	],
-	"needsVoices": true,
 	"parsedColor": -2156777,
-	"displayName": "Breathe",
-	"icon": "House",
+	"color": "#DF1717",
 	"name": "breathe",
-	"color": "#DF1717"
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"displayName": "Breathe",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 130
 }
