@@ -10,11 +10,16 @@ function onEvent(eventEvent) {
         }
 		else
 			{
+				lockedIn = true;
 				curCameraTarget = -1;
 				camFollow.x = eventEvent.event.params[0];
 				camFollow.y = eventEvent.event.params[1];
 			}
 		}
+		if (eventEvent.event.name == "Camera Movement")
+			{
+				lockedIn = false;
+			}
 }
 
 
