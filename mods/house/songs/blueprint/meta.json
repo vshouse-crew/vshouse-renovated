@@ -1,17 +1,17 @@
 {
-	"beatsPerMeasure": 4,
 	"opponentModeAllowed": true,
-	"coopAllowed": true,
-	"stepsPerBeat": 4,
-	"bpm": 100,
+	"icon": "house",
 	"difficulties": [
 		"normal"
 	],
-	"needsVoices": false,
 	"parsedColor": -61167,
-	"displayName": "Blueprint",
-	"icon": "house",
-	"name": "blueprint",
+	"customValues": {},
 	"color": "#FF1111",
-	"customValues": {}
+	"name": "blueprint",
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"displayName": "Blueprint",
+	"beatsPerMeasure": 4,
+	"needsVoices": false,
+	"bpm": 100
 }
