@@ -1,16 +1,17 @@
 {
+	"beatsPerMeasure": 4,
 	"opponentModeAllowed": true,
-	"icon": "house",
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"bpm": 184,
 	"difficulties": [
 		"normal"
 	],
-	"parsedColor": -1,
-	"color": "#FFFFFF",
-	"name": "District",
-	"coopAllowed": true,
-	"stepsPerBeat": 4,
-	"displayName": "District",
-	"beatsPerMeasure": 4,
 	"needsVoices": true,
-	"bpm": 184
+	"parsedColor": -5224374,
+	"displayName": "District",
+	"icon": "house",
+	"name": "District",
+	"color": "#B0484A",
+	"customValues": {}
 }
