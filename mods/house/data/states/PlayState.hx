@@ -52,6 +52,6 @@ function create()
 					}
 					else if(curSong == 'renovation' && misses == 15)
 						{
-health = 0;
+							gameOver();
 						}
 		}
