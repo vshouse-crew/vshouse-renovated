@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="top10house.png"><SubTexture name="top10house down0000" x="0" y="0" width="205" height="199" frameX="0" frameY="0" frameWidth="205" frameHeight="199" />
+<SubTexture name="top10house idle0000" x="205" y="0" width="205" height="199" frameX="0" frameY="0" frameWidth="205" frameHeight="199" />
+<SubTexture name="top10house left0000" x="0" y="199" width="193" height="195" frameX="0" frameY="0" frameWidth="193" frameHeight="195" />
+<SubTexture name="top10house right0000" x="193" y="199" width="242" height="199" frameX="0" frameY="0" frameWidth="242" frameHeight="199" />
+<SubTexture name="top10house up0000" x="0" y="398" width="203" height="246" frameX="0" frameY="0" frameWidth="203" frameHeight="246" />
+</TextureAtlas>

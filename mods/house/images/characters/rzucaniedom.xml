@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="rzucaniedom.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="pick0000" x="0" y="0" width="464" height="428" frameX="-2" frameY="0" frameWidth="558" frameHeight="642"/>
+	<SubTexture name="pick0001" x="0" y="0" width="464" height="428" frameX="-2" frameY="0" frameWidth="558" frameHeight="642"/>
+	<SubTexture name="pick0002" x="464" y="0" width="526" height="606" frameX="-1" frameY="-2" frameWidth="558" frameHeight="642"/>
+	<SubTexture name="pick0003" x="464" y="0" width="526" height="606" frameX="-1" frameY="-2" frameWidth="558" frameHeight="642"/>
+	<SubTexture name="pick0004" x="990" y="0" width="526" height="614" frameX="0" frameY="-6" frameWidth="558" frameHeight="642"/>
+	<SubTexture name="pick0005" x="990" y="0" width="526" height="614" frameX="0" frameY="-6" frameWidth="558" frameHeight="642"/>
+	<SubTexture name="pick0006" x="1516" y="0" width="524" height="638" frameX="-1" frameY="-4" frameWidth="558" frameHeight="642"/>
+	<SubTexture name="pick0007" x="1516" y="0" width="524" height="638" frameX="-1" frameY="-4" frameWidth="558" frameHeight="642"/>
+	<SubTexture name="pick0008" x="2040" y="0" width="523" height="638" frameX="-2" frameY="0" frameWidth="558" frameHeight="642"/>
+	<SubTexture name="pick0009" x="2040" y="0" width="523" height="638" frameX="-2" frameY="0" frameWidth="558" frameHeight="642"/>
+	<SubTexture name="swing0000" x="2563" y="0" width="500" height="330" frameX="0" frameY="-5" frameWidth="500" frameHeight="335"/>
+	<SubTexture name="swing0001" x="2563" y="0" width="500" height="330" frameX="0" frameY="-5" frameWidth="500" frameHeight="335"/>
+	<SubTexture name="swing0002" x="3063" y="0" width="497" height="333" frameX="-3" frameY="-2" frameWidth="500" frameHeight="335"/>
+	<SubTexture name="swing0003" x="3063" y="0" width="497" height="333" frameX="-3" frameY="-2" frameWidth="500" frameHeight="335"/>
+	<SubTexture name="swing0004" x="3560" y="0" width="496" height="335" frameX="-4" frameY="0" frameWidth="500" frameHeight="335"/>
+	<SubTexture name="swing0005" x="3560" y="0" width="496" height="335" frameX="-4" frameY="0" frameWidth="500" frameHeight="335"/>
+	<SubTexture name="swing0006" x="0" y="638" width="494" height="335" frameX="-6" frameY="0" frameWidth="500" frameHeight="335"/>
+	<SubTexture name="swing0007" x="0" y="638" width="494" height="335" frameX="-6" frameY="0" frameWidth="500" frameHeight="335"/>
+	<SubTexture name="throw0000" x="494" y="638" width="484" height="335" frameX="0" frameY="0" frameWidth="490" frameHeight="335"/>
+	<SubTexture name="throw0001" x="494" y="638" width="484" height="335" frameX="0" frameY="0" frameWidth="490" frameHeight="335"/>
+	<SubTexture name="throw0002" x="978" y="638" width="480" height="326" frameX="-8" frameY="-3" frameWidth="490" frameHeight="335"/>
+	<SubTexture name="throw0003" x="1458" y="638" width="476" height="318" frameX="-14" frameY="-5" frameWidth="490" frameHeight="335"/>
+	<SubTexture name="throw0004" x="1458" y="638" width="476" height="318" frameX="-14" frameY="-5" frameWidth="490" frameHeight="335"/>
+	<SubTexture name="throw0005" x="1934" y="638" width="476" height="318" frameX="-14" frameY="-5" frameWidth="490" frameHeight="335"/>
+	<SubTexture name="throw0006" x="1934" y="638" width="476" height="318" frameX="-14" frameY="-5" frameWidth="490" frameHeight="335"/>
+	<SubTexture name="throw0007" x="1934" y="638" width="476" height="318" frameX="-14" frameY="-5" frameWidth="490" frameHeight="335"/>
+</TextureAtlas>

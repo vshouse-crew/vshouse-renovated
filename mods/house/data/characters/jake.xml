@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="0" icon="jake" y="0" isGF="false" scale="1.6" color="#FFD834" isPlayer="false" gameOverChar="jake" holdTime="6.1" sprite="PNGJake">
+	<anim x="0" loop="false" y="0" fps="24" anim="Idle" name="idle"/>
+	<anim x="76" loop="false" y="677" fps="24" anim="Up" name="singUP"/>
+	<anim x="315" loop="false" y="-107" fps="24" anim="Left" name="singLEFT"/>
+	<anim x="-19" loop="false" y="-17" fps="24" anim="Right" name="singRIGHT"/>
+	<anim x="27" loop="false" y="-324" fps="24" anim="Down" name="singDOWN"/>
+</character>

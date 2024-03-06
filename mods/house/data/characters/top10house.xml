@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="0" icon="house-awesome" y="0" isGF="false" scale="1.6" color="#B04A4A" isPlayer="false" holdTime="6.1" sprite="top10house">
+	<anim x="0" loop="false" y="0" fps="24" anim="top10house idle" name="idle"/>
+	<anim x="-4" loop="false" y="40" fps="24" anim="top10house up" name="singUP"/>
+	<anim x="29" loop="false" y="-4" fps="24" anim="top10house left" name="singLEFT"/>
+	<anim x="10" loop="false" y="-11" fps="24" anim="top10house right" name="singRIGHT"/>
+	<anim x="0" loop="false" y="1" fps="24" anim="top10house down" name="singDOWN"/>
+</character>
