@@ -38,3 +38,12 @@ function create()
     function onSubstateOpen(substate) { 
         FlxG.drawFramerate = FlxG.updateFramerate = 240;
     }
+    function stepHit(curStep) {
+        if(curStep == 1007)
+            {
+        FlxTween.tween(boyfriend, {x: 2300}, 5, {ease: FlxEase.elasticInOut});
+        FlxTween.tween(BFLegs, {x: 2300}, 5, {ease: FlxEase.elasticInOut});
+        FlxTween.tween(dad, {x: 2300}, 5, {ease: FlxEase.elasticInOut});
+        FlxTween.tween(legs, {x: 2300}, 5, {ease: FlxEase.elasticInOut});
+            }
+        }
