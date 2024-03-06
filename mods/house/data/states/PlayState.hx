@@ -50,7 +50,7 @@ function create()
 						var green = new FlxTextFormatMarkerPair(kaszana, "@");
 						missesTxt.applyMarkup('@' + missesTxt.text + '@', [green]);
 					}
-					else if(curSong == 'renovation' && misses == 15)
+					else if(curSong == 'renovation' && misses > 14)
 						{
 							gameOver();
 						}
