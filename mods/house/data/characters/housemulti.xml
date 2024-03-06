@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-character>
+<character x="0" icon="houseconfused" y="350" isGF="false" color="#6F2B12" flipX="true" isPlayer="true" sprite="housemulti">
+	<anim x="-5" loop="false" y="0" fps="24" anim="Idle" name="idle"/>
+	<anim x="36" loop="false" y="115" fps="24" anim="Up" name="singUP"/>
+	<anim x="129" loop="false" y="3" fps="24" anim="Left" name="singLEFT"/>
+	<anim x="-58" loop="false" y="-1" fps="24" anim="Right" name="singRIGHT"/>
+	<anim x="21" loop="false" y="-52" fps="24" anim="Down" name="singDOWN"/>
+	<anim x="46" loop="false" y="130" fps="24" anim="missUp" name="singUPmiss"/>
+	<anim x="134" loop="false" y="1" fps="24" anim="missRight" name="singLEFTmiss"/>
+	<anim x="-62" loop="false" y="-3" fps="24" anim="missLeft" name="singRIGHTmiss"/>
+	<anim x="20" loop="false" y="-51" fps="24" anim="missDown" name="singDOWNmiss"/>
+	<anim x="7" loop="false" y="4" fps="24" anim="BF HEY" name="hey"/>
+	<anim x="-4" loop="true" y="0" fps="24" anim="BF idle shaking" name="scared"/>
+</character>
