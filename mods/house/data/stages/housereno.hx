@@ -39,7 +39,7 @@ function create()
         FlxG.drawFramerate = FlxG.updateFramerate = 240;
     }
     function stepHit(curStep) {
-        if(curStep == 1007)
+        if(curStep == 2047)
             {
         FlxTween.tween(boyfriend, {x: 2300}, 5, {ease: FlxEase.elasticInOut});
         FlxTween.tween(BFLegs, {x: 2300}, 5, {ease: FlxEase.elasticInOut});

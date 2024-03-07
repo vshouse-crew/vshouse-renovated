@@ -3,7 +3,7 @@
 	"opponentModeAllowed": true,
 	"coopAllowed": true,
 	"stepsPerBeat": 4,
-	"bpm": 100,
+	"bpm": 205,
 	"difficulties": [
 		"normal"
 	],
