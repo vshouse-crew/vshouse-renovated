@@ -7,6 +7,8 @@ function onPlayerHit(e)
                 FlxG.sound.play(Paths.sound('bulletSound'));
                 boyfriend.playAnim("shot");
                 health = health + 0.2;
+                FlxG.camera.shake(0.02, 0.2);
+                camGame.zoom = 0.8;
             }
     }
 function onPlayerMiss(e) {
