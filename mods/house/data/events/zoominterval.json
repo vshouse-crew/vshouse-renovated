@@ -1,0 +1,9 @@
+{
+    "params": [
+        {
+            "name": "Current Zoom +",
+            "type": "String",
+            "defaultValue": "0"
+        }
+    ]
+}

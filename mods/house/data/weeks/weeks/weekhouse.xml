@@ -1,0 +1,7 @@
+<!DOCTYPE codename-engine-week>
+<week name="--                       house main week                        --" chars="tankman,bf,gf" sprite="week7">
+	<song>breathe</song>
+	<song>district</song>
+	<song>dispute</song>
+	<song hide="true">renovation</song>
+</week>

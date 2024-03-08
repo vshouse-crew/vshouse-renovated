@@ -9,11 +9,15 @@ var target = 0;
 function postCreate()
     {
         target = 0;
+        if(curSong == 'renovation')
+        {
+            yy = yy - 100;
+            yy2 = yy2 - 100;
+        }
         camFollow.x = xx;
         camFollow.y = yy;
         trace(target);
         trace(lockedIn);
-        
     }
 
 function update(elapsed)

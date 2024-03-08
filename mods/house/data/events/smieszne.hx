@@ -2,14 +2,18 @@ import funkin.game.PlayState;
 import funkin.game.StrumLine;
 import funkin.game.NoteGroup;
 
-var IsFighting = false;
-var beater = 0;
-var checkifclicked = false;
-var dodged = false;
+var IsFighting:Bool;
+var beater:Int;
+var checkifclicked:Bool;
+var dodged:Bool;
 
 
 function create()
 {
+        IsFighting = false;
+        beater = 0;
+        checkifclicked = false;
+        dodged = false;
 	icon = new FlxSprite(1920/4 + 50, 1000).loadGraphic(Paths.image('mechanic/Shift'));
 	icon.cameras = [camHUD];
 	icon.angle = 180;
@@ -20,10 +24,19 @@ function create()
 	add(eyey);
         eyey.alpha = 0;
 }
+function onPostCountdown(c) {
+        changeCharacter("dad", "housethrow");
+        dad.playAnim("Pick");
+        dad.playAnim("Swing");
+        dad.playAnim("Throw");
+        changeCharacter("dad", "houserunning");
+  }
 
 
 function onEvent(eventEvent) {
 	if (eventEvent.event.name == "smieszne") {
+                lockedIn = true;
+                changeCharacter("dad", "housethrow");
         eyey.alpha = 0;
         FlxG.sound.play(Paths.sound('renovation/warning'));
         icon.alpha = 1; 
@@ -48,7 +61,8 @@ function onEvent(eventEvent) {
         }
 }
 function beatHit(curBeat) {
-        if (isFighting == true) {
+        if (isFighting) 
+                {
         beater = beater + 1;
 
         icon.scale.set(1, 1);
@@ -57,18 +71,23 @@ function beatHit(curBeat) {
 	});
 
         if (beater == 1) {
+        dad.playAnim("Pick");
         FlxG.sound.play(Paths.sound('renovation/warning'));
         dodged = false;
         checkifclicked = true;
         }
 
         if (beater == 2) {
+        dad.playAnim("Swing");
         FlxG.sound.play(Paths.sound('renovation/throw'));
         }
 
         if (beater == 3) {
+        dad.playAnim("Throw");
+        lockedIn = false;
         checkifclicked = false;
         if (dodged) {
+                changeCharacter("dad", "houserunning");
         var tweener = FlxTween.color(icon, 0.1, 0xFFFFFFFF, FlxColor.fromRGB(127,255,0) , {
 		ease: FlxEase.cubeOut,
 	});
@@ -76,6 +95,7 @@ function beatHit(curBeat) {
         }
         if (!dodged) {
 
+                changeCharacter("dad", "houserunning");
         health = health - 0.7;
         var tween3 = FlxTween.shake(icon, 0.05, 0.3, FlxAxes.XY, {
 		ease: FlxEase.cubeOut,
@@ -122,3 +142,29 @@ dodged = true;
 }
 }
 }
+function changeCharacter(oldchar, newchar)
+        {
+                var thechar:Character = null;
+                switch (oldchar)
+                {
+                        case "bf":
+                                thechar = boyfriend;
+                                state.remove(boyfriend);
+                                boyfriend = null;
+                                boyfriend = new Character(thechar.x, thechar.y, newchar, thechar.isPlayer, true);
+                                state.add(boyfriend);
+        
+                        case "dad":
+                                thechar = dad;
+                                state.remove(dad);
+                                dad = null;
+                                dad = new Character(thechar.x, thechar.y, newchar, thechar.isPlayer, true);
+                                state.add(dad);
+        
+                }
+                var leftColor:Int = dad.iconColor != null && Options.colorHealthBar ? dad.iconColor : 0xFFFF0000;
+                var rightColor:Int = boyfriend.iconColor != null && Options.colorHealthBar ? boyfriend.iconColor : 0xFF66FF33;
+                var colors = [leftColor, rightColor];
+                healthBar.createFilledBar((state.opponentMode ? colors[1] : colors[0]), (state.opponentMode ? colors[0] : colors[1]));
+                healthBar.updateBar();
+        }

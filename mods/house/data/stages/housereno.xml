@@ -1,15 +1,15 @@
 <!DOCTYPE codename-engine-stage>
 <stage folder="stages/housereno/" zoom="0.5">
-	<sprite x="-3482.25" y="-551" sprite="gradient" scale="1.5" name="gradient"/>
-	<sprite x="6178" y="-397.5" sprite="domki" type="loop" scale="1.8" name="domki"/>
-	<sprite scrolly="0.1" x="687.475" y="-722" sprite="ksiezycnoc" scrollx="1.7" name="ksiezycnoc"/>
-	<sprite x="-1980" sprite="kawalekpodlogi" y="702" scale="2" name="kawalekpodlogi"/>
-	<sprite x="-3577" y="-381" sprite="stage" type="loop" scale="1.4" name="stage"/>
+	<sprite x="-3482.25" sprite="gradient" y="-551" scale="1.5" name="gradient"/>
+	<sprite x="6178" sprite="domki" y="-397.5" scale="1.8" type="loop" name="domki"/>
+	<sprite x="344.625" scrolly="0.1" sprite="ksiezycnoc" y="-389" name="ksiezycnoc" scrollx="1.7"/>
+	<sprite x="-1980" y="702" sprite="kawalekpodlogi" scale="2" name="kawalekpodlogi"/>
+	<sprite x="-3577" sprite="stage" y="-381" scale="1.4" type="loop" name="stage"/>
 	<gf x="447" y="50"/>
-	<sprite x="-137.5" sprite="legs" y="645" scale="1.8" type="loop" name="legs"/>
-	<dad x="-149" y="198"/>
-	<sprite x="1064.5" y="685" sprite="BFLegs" type="loop" name="BFLegs"/>
-	<bf x="1101" y="431.5"/>
+	<sprite x="-137.5" y="545" sprite="legs" type="loop" scale="1.8" name="legs"/>
+	<dad x="-149" y="98"/>
+	<sprite x="1064.5" sprite="BFLegs" y="485" type="loop" name="BFLegs"/>
+	<bf x="1101" y="231.5"/>
 	<combo/>
-	<sprite x="-616" y="-286" sprite="overlay2" alpha="0.8" scale="1.5" name="overlay2"/>
+	<sprite x="-616" sprite="overlay2" y="-286" scale="1.5" alpha="0.8" name="overlay2"/>
 </stage>
