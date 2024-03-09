@@ -23,7 +23,7 @@ function onGameOver(e) {
     }
     function stepHit(curStep) {
         if (curStep % 4 == 0) {
-             FlxG.camera.shake(0.02, 0.1);
+             FlxG.camera.shake(0.003, 0.2);
         }
         if(curStep == 1503)
             {

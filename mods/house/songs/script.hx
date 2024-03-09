@@ -74,6 +74,12 @@ var tween2 = FlxTween.tween(iconn, {x: 320}, 1, {
 		ease: FlxEase.cubeOut,
 	});
     }
+    else if(curSong == 'multiversus')
+    {
+    var tween4 = FlxTween.tween(funnitext2, {x: 50}, 1, {
+    ease: FlxEase.cubeOut,
+    });
+    }
 	else{
 		var tween4 = FlxTween.tween(funnitext2, {x: 100}, 1, {
 			ease: FlxEase.cubeOut,
