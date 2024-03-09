@@ -55,3 +55,22 @@ function create()
 							gameOver();
 						}
 		}
+		public function endSong() {
+		if(curSong == 'renovation')
+			{
+				FlxG.save.data.renovationLock = 'unlocked';
+				FlxG.save.flush();
+			}
+			if(curSong == 'fundament')
+				{
+					FlxG.save.data.fundamentLock = 'unlocked';
+					FlxG.save.flush();
+				}
+				if(curSong == 'multiversus')
+					{
+						FlxG.save.data.multiversusLock = 'unlocked';
+						FlxG.save.flush();
+					}
+					
+		}
+

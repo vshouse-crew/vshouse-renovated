@@ -4,6 +4,7 @@ var missLocked:Bool;
 
 function create()
 {
+    missLocked = false;
     runOffset = 0;
     tick = 0;
     stageMove();
@@ -16,8 +17,12 @@ function onGameOver(e) {
     FlxG.drawFramerate = FlxG.updateFramerate = Options.framerate;
     }
     function stepHit(curStep) {
+        if (curStep % 4 == 0) {
+        FlxG.camera.shake(0.02, 0.1);
+        }
         if(curStep == 1503)
             {
+                missLocked = true;
         FlxTween.tween(boyfriend, {x: 1101}, 5, {ease: FlxEase.elasticInOut});
         FlxTween.tween(BFLegs, {x: 1064.5}, 5, {ease: FlxEase.elasticInOut});
             }
