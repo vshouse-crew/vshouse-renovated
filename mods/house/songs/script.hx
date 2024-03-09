@@ -24,7 +24,9 @@ function create() {
 	add(bgThing);
 
 	if(curSong == 'Dispute') iconn = new FlxSprite(-750, 300).loadGraphic(Paths.image('watermark/icons/houseangy'));	
-	if(curSong == 'renovation') iconn = new FlxSprite(-750, 300).loadGraphic(Paths.image('watermark/icons/housefury'));	
+	else if(curSong == 'renovation') iconn = new FlxSprite(-750, 300).loadGraphic(Paths.image('watermark/icons/housefury'));	
+	else if(curSong == 'fundament') iconn = new FlxSprite(-750, 300).loadGraphic(Paths.image('watermark/icons/house2d'));	
+	else if(curSong == 'multiversus') iconn = new FlxSprite(-750, 300).loadGraphic(Paths.image('watermark/icons/jake'));	
 	else iconn = new FlxSprite(-750, 300).loadGraphic(Paths.image('watermark/icons/house'));
 	iconn.cameras = [camHUD];
 	add(iconn);
@@ -57,6 +59,8 @@ function create() {
 	add(funnitext3);
 }
 function onCountdown() {
+	if(curSong != 'fundament')
+		{
 var tween = FlxTween.tween(bgThing, {x: -500}, 1, {
 		ease: FlxEase.cubeOut,
 	});
@@ -103,8 +107,11 @@ var tween2 = FlxTween.tween(iconn, {x: 320}, 1, {
 		ease: FlxEase.cubeOut,
 	});
 		}
+	}
 }
 function stepHit(curStep) {
+	if(curSong != 'fundament')
+		{
 if (curStep == 25)
 	{
 		var tween = FlxTween.tween(bgThing, {x: -1050}, 1, {
@@ -123,6 +130,78 @@ if (curStep == 25)
 			ease: FlxEase.cubeOut,
 		});
 	}
+}
+else 
+	{
+		if(curStep == 256)
+			{
+		var tween = FlxTween.tween(bgThing, {x: -500}, 1, {
+			ease: FlxEase.cubeOut,
+		});
+	var tween2 = FlxTween.tween(iconn, {x: 320}, 1, {
+			ease: FlxEase.cubeOut,
+		});
+		
+			
+		var tween3 = FlxTween.tween(funnitext, {x: 50}, 1, {
+			ease: FlxEase.cubeOut,
+		});
+		if(curSong == 'renovation')
+			{
+		var tween4 = FlxTween.tween(funnitext2, {x: 75}, 1, {
+			ease: FlxEase.cubeOut,
+		});
+		}
+		else if(curSong == 'multiversus')
+		{
+		var tween4 = FlxTween.tween(funnitext2, {x: 50}, 1, {
+		ease: FlxEase.cubeOut,
+		});
+		}
+		else{
+			var tween4 = FlxTween.tween(funnitext2, {x: 100}, 1, {
+				ease: FlxEase.cubeOut,
+			});
+		}
+		var tween5 = FlxTween.tween(funnitext3, {x: 25}, 1, {
+			ease: FlxEase.cubeOut,
+		});
+		if(!downscroll)
+			{
+				tween3.cancel();
+				tween4.cancel();
+				tween5.cancel();
+		var tween3 = FlxTween.tween(funnitext3, {x: 25}, 1, {
+			ease: FlxEase.cubeOut,
+		});
+		var tween4 = FlxTween.tween(funnitext2, {x: 100}, 1, {
+			ease: FlxEase.cubeOut,
+		});
+		var tween5 = FlxTween.tween(funnitext, {x: 50}, 1, {
+			ease: FlxEase.cubeOut,
+		});
+	}
+	}
+	if(curStep == 256 + 25)
+		{
+			var tween = FlxTween.tween(bgThing, {x: -1050}, 1, {
+				ease: FlxEase.cubeOut,
+			});
+			var tween2 = FlxTween.tween(iconn, {x: -750}, 1, {
+				ease: FlxEase.cubeOut,
+			});
+			var tween3 = FlxTween.tween(funnitext, {x: -1050}, 1, {
+				ease: FlxEase.cubeOut,
+			});
+			var tween4 = FlxTween.tween(funnitext2, {x: -1050}, 1, {
+				ease: FlxEase.cubeOut,
+			});
+			var tween5 = FlxTween.tween(funnitext3, {x: -1050}, 1, {
+				ease: FlxEase.cubeOut,
+			});
+		}
+}
+
 }
 function beatHit(curBeat) {
 		funnitext.angle = 2;

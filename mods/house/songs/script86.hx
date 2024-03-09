@@ -14,6 +14,11 @@ function postCreate()
             yy = yy - 100;
             yy2 = yy2 - 100;
         }
+		if(curSong == 'fundament')
+			{
+				yy = yy - 100;
+				xx = xx + 50;
+			}
         camFollow.x = xx;
         camFollow.y = yy;
         trace(target);
