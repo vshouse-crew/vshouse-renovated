@@ -98,7 +98,7 @@ function beatHit(curBeat) {
                 changeCharacter("dad", "houserunning");
         health = health - 0.7;
         var tween3 = FlxTween.shake(icon, 0.05, 0.3, FlxAxes.XY, {
-		ease: FlxEase.cubeOut,
+		ease: FlxEase.cubeIn,
 	});
 
         icon.scale.set(1, 1);

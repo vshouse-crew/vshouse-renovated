@@ -8,6 +8,11 @@ function create()
     runOffset = 0;
     tick = 0;
     stageMove();
+
+	var shad = new CustomShader('sillyrenovation');
+	camGame.addShader(shad);
+        shad.u_size = 0.8;
+        shad.u_alpha = 0.25;
 }
 
 function onSubstateOpen(substate) { //called when a substate is opened
@@ -18,7 +23,7 @@ function onGameOver(e) {
     }
     function stepHit(curStep) {
         if (curStep % 4 == 0) {
-        FlxG.camera.shake(0.02, 0.1);
+             FlxG.camera.shake(0.02, 0.1);
         }
         if(curStep == 1503)
             {
