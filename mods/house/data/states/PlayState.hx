@@ -55,8 +55,8 @@ function create()
 							gameOver();
 						}
 		}
-		public function endSong() {
-		if(curSong == 'renovation')
+	function onSongEnd() {
+		if(curSong == 'district')
 			{
 				FlxG.save.data.renovationLock = 'unlocked';
 				FlxG.save.flush();

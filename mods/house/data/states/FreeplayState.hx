@@ -8,5 +8,6 @@ function create() {
 		{
 	songs.push(Chart.loadChartMeta('renovation', "normal"));
 	songs.push(Chart.loadChartMeta('swatting', "normal"));
+	songs.push(Chart.loadChartMeta('my lawn', "normal"));
 		}
 }
