@@ -1,4 +1,4 @@
-import flixel.text.FlxText.FlxTextFormat;
+
 import flixel.text.FlxText.FlxTextFormat;
 import flixel.text.FlxText.FlxTextFormatMarkerPair;
 import flixel.text.FlxText.FlxTextBorderStyle;
