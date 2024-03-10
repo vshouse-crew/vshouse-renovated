@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="0" icon="gf" y="350" isGF="true" color="#2EB3D1" isPlayer="false" sprite="GFDistrict">
+<character x="-100" icon="gf" y="100" isGF="true" color="#2EB3D1" isPlayer="false" sprite="GFDistrict">
 	<anim x="-4" loop="true" y="0" fps="24" anim="gf sad" name="sad"/>
 	<anim x="0" loop="false" y="0" fps="24" anim="jajcogfleft" name="danceLeft"/>
 	<anim x="0" loop="false" y="0" fps="24" anim="jajcogfright" name="danceRight"/>
