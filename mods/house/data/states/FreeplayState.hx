@@ -5,12 +5,31 @@ function create() {
 	trace(FlxG.save.data.renovationLock);
 	trace(FlxG.save.data.multiversusLock);
 	trace(FlxG.save.data.fundamentLock);
+	trace(PlayState.SONG.meta.name);
+
 	if(FlxG.save.data.renovationLock == 'unlocked')
 		{
 	songs.push(Chart.loadChartMeta('renovation', "normal"));
 	songs.push(Chart.loadChartMeta('swatting', "normal"));
 	songs.push(Chart.loadChartMeta('my lawn', "normal"));
 		}
+
+	if(FlxG.save.data.multiversusLock == 'unlocked')
+		{
+	songs.push(Chart.loadChartMeta('multiversus', "normal"));
+		}
+
+	if(FlxG.save.data.fundamentLock == 'unlocked')
+		{
+	songs.push(Chart.loadChartMeta('fundament', "normal"));
+		}
+	
+	if(FlxG.save.data.renovationLock == 'unlocked' && FlxG.save.data.multiversusLock == 'unlocked' && FlxG.save.data.fundamentLock == 'unlocked')
+		{
+			songs.push(Chart.loadChartMeta('house', "normal"));
+		}
+
+		
 }
 function onSelect(e) {
 	
@@ -18,6 +37,14 @@ function onSelect(e) {
 	Options.freeplayLastDifficulty = songs[curSelected].difficulties[curDifficulty];
 
 	PlayState.loadSong(e.song, e.difficulty, e.opponentMode, e.coopMode);
-	FlxG.switchState(new ModState("CharacterChooser"));
+	trace(PlayState.SONG.meta.name);
+	if (PlayState.SONG.meta.name == 'renovation' || PlayState.SONG.meta.name == 'swatting' || PlayState.SONG.meta.name == 'fundament' || PlayState.SONG.meta.name == 'house')
+		{
+			FlxG.switchState(new PlayState());
+	}
+	else
+	{
+		FlxG.switchState(new ModState("CharacterChooser"));
+	}
 	e.cancel();
 }
