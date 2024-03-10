@@ -234,6 +234,7 @@ function barrierWarning():Void {
                         barrierWarningText = new FlxText(FlxG.width/2-100, FlxG.height/2-50, 200, "zesralem sie");
                         barrierWarningText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE);
                         barrierWarningText.alignment = FlxTextAlign.CENTER;
+                        barrierWarningText.setBorderStyle(FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 2);
                         add(barrierWarningText);
     }
             

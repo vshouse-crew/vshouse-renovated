@@ -236,17 +236,20 @@ function update()
     }
 
 function barrierWarning():Void {
-            fifigej = false;
-                        barrierWarningScreen = new FlxSprite();
-                        barrierWarningScreen.makeGraphic(FlxG.width, FlxG.height, 0xff000000);
-                        barrierWarningScreen.alpha = 0.5;
-                        add(barrierWarningScreen);
-            
-                        barrierWarningText = new FlxText(FlxG.width/2-100, FlxG.height/2-50, 200, "zesralem sie");
-                        barrierWarningText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE);
-                        barrierWarningText.alignment = FlxTextAlign.CENTER;
-                        add(barrierWarningText);
-                }
+        fifigej = false;
+        
+        barrierWarningScreen = new FlxSprite();
+        barrierWarningScreen.makeGraphic(FlxG.width, FlxG.height, 0xff000000);
+        barrierWarningScreen.alpha = 0.5;
+        add(barrierWarningScreen);
+        
+        barrierWarningText = new FlxText(0, 0, FlxG.width, "Do NOT ever do that again.\n\nPress ENTER to dismiss", 32);
+        barrierWarningText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE);
+        barrierWarningText.alignment = FlxTextAlign.CENTER;
+        barrierWarningText.setBorderStyle(FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 2);
+        barrierWarningText.screenCenter(Y);
+        add(barrierWarningText);
+    }
             
 function barrierImage():Void {
                     currentBarrier = currentBarrier + 1;
