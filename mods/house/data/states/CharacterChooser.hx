@@ -1,4 +1,3 @@
-
 import funkin.game.PlayState;
 import flixel.addons.display.FlxBackdrop;
 import flixel.util.FlxAxes;
@@ -13,10 +12,6 @@ import flixel.addons.transition.TransitionData;
 import haxe.Json;
 import openfl.display.Bitmap;
 import openfl.display.BitmapData;
-#if MODS_ALLOWED
-import sys.FileSystem;
-import sys.io.File;
-#end
 //import flixel.graphics.FlxGraphic;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.graphics.frames.FlxFrame;
@@ -40,35 +35,33 @@ import flixel.text.FlxText.FlxTextFormatMarkerPair;
 import flixel.text.FlxText.FlxTextBorderStyle;
 import flixel.text.FlxText.FlxTextAlign;
     
-    var images:Array<FlxSprite>;
-	var bg:FlxSprite;
+var images:Array<FlxSprite>;
+var bg:FlxSprite;
 var flash = new FlxSprite();
-    var arrow1:FlxSprite;
-    var arrow2:FlxSprite;
-	var Character:FlxSprite;
-    var brick:FlxBackdrop;
-        var whattochoose:String;
-	var fifigej:Bool;
-	var canmove:Bool;
-	var curSelectedPlayer:String;
-	var barrierWarningScreen:FlxSprite;
-	var barrierWarningText:FlxText;
-    public var currentBarrierImage:Int;
-    public var currentBarrier:Int;
-    public var barrierShake:Float;
+var arrow1:FlxSprite;
+var arrow2:FlxSprite;
+var Character:FlxSprite;
+var brick:FlxBackdrop;
+var whattochoose:String;
+var fifigej:Bool;
+var canmove:Bool;
+var curSelectedPlayer:String;
+var barrierWarningScreen:FlxSprite;
+var barrierWarningText:FlxText;
+var currentBarrierImage:Int;
+var currentBarrier:Int;
+var barrierShake:Float;
 
-        var curSelectedSkin:String;
-        public var currentIndex:Int;
-        var imageText:FlxText;
-        var kakaText:FlxText;
-		var X:FlxAxes = 0x01;
-		var Y:FlxAxes = 0x10;
-		var XY:FlxAxes = 0x11;
-	override function create()
+var curSelectedSkin:String;
+var currentIndex:Int;
+var imageText:FlxText;
+var kakaText:FlxText;
+var X:FlxAxes = 0x01;
+var Y:FlxAxes = 0x10;
+var XY:FlxAxes = 0x11;
+
+function create()
 	{
-
-
-
 		currentBarrier = 0;
 		trace(PlayState.SONG.meta.name);
         fifigej = true;
@@ -77,34 +70,29 @@ var flash = new FlxSprite();
         FlxG.sound.playMusic(Paths.music('characterselectiontrack'), 0.7);
 		FlxG.mouse.visible = false;
 
-
-
-		bg = new FlxSprite().loadGraphic(Paths.image('cc/ccbg'));
+		bg = new FlxSprite().loadGraphic(Paths.image('characterChooser/ccbg'));
 		add(bg);
 
-		bg2 = new FlxSprite().loadGraphic(Paths.image('cc/ccbgmagneta'));
-                bg2.visible = false;
+		bg2 = new FlxSprite().loadGraphic(Paths.image('characterChooser/ccbgmagneta'));
+        bg2.visible = false;
 		add(bg2);
 
-
-               
-
-        brick = new FlxBackdrop(Paths.image('cc/smiesznepaski')); 
+        brick = new FlxBackdrop(Paths.image('characterChooser/smiesznepaski')); 
         brick.velocity.set(100, 0); 
         brick.updateHitbox(); 
         brick.scrollFactor.set(0, 0); 
         brick.alpha = 1; 
         add(brick);
 
-        var bars = new FlxSprite().loadGraphic(Paths.image('cc/ccblackbar'));
+        var bars = new FlxSprite().loadGraphic(Paths.image('characterChooser/ccblackbar'));
 		add(bars);
 		bars.screenCenter();
 
-        arrow1 = new FlxSprite().loadGraphic(Paths.image('cc/arrow1'));
+        arrow1 = new FlxSprite().loadGraphic(Paths.image('characterChooser/arrow1'));
 		add(arrow1);
 		arrow1.screenCenter();
 
-        arrow2 = new FlxSprite().loadGraphic(Paths.image('cc/arrow2'));
+        arrow2 = new FlxSprite().loadGraphic(Paths.image('characterChooser/arrow2'));
         arrow2.visible = false;
 		add(arrow2);
 		arrow2.screenCenter();
@@ -120,61 +108,54 @@ var flash = new FlxSprite();
         kakaText.setBorderStyle(FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 1.5);
         add(kakaText);
 
-		iconbf = new FlxSprite().loadGraphic(Paths.image('cc/icons/Boyfriendselected'));
-                iconbf.y = 580;
-                iconbf.setGraphicSize(Std.int(iconbf.width * 0.8)); 
+		iconbf = new FlxSprite().loadGraphic(Paths.image('characterChooser/icons/Boyfriendselected'));
+        iconbf.y = 580;
+        iconbf.setGraphicSize(Std.int(iconbf.width * 0.8)); 
 		add(iconbf);
 
-		icongf = new FlxSprite().loadGraphic(Paths.image('cc/icons/gf'));
-                icongf.setGraphicSize(Std.int(icongf.width * 0.8));
-                icongf.y = 575;
-                icongf.x = 105;
-                    icongf.alpha = 0.5;
+		icongf = new FlxSprite().loadGraphic(Paths.image('characterChooser/icons/gf'));
+        icongf.setGraphicSize(Std.int(icongf.width * 0.8));
+        icongf.y = 575;
+        icongf.x = 105;
+        icongf.alpha = 0.5;
 		add(icongf);
-
-
-               
-		BFMARK = new FlxSprite(90, 620).loadGraphic(Paths.image('cc/SkinSelectorThings'));
-		BFMARK.frames = Paths.getSparrowAtlas('cc/SkinSelectorThings');
-                BFMARK.setGraphicSize(Std.int(BFMARK.width * 0.4));
+ 
+		BFMARK = new FlxSprite(90, 620).loadGraphic(Paths.image('characterChooser/SkinSelectorThings'));
+		BFMARK.frames = Paths.getSparrowAtlas('characterChooser/SkinSelectorThings');
+        BFMARK.setGraphicSize(Std.int(BFMARK.width * 0.4));
 		BFMARK.animation.addByPrefix('Question', 'QuestionMark', 24, true);
 		BFMARK.animation.addByPrefix('accepted', 'silly', 24, false);
 		BFMARK.animation.play('Question');
 		BFMARK.updateHitbox();
-                add(BFMARK);
+        add(BFMARK);
 
-		GFMARK = new FlxSprite(90 + 105, 620).loadGraphic(Paths.image('cc/SkinSelectorThings'));
-		GFMARK.frames = Paths.getSparrowAtlas('cc/SkinSelectorThings');
-                GFMARK.setGraphicSize(Std.int(GFMARK.width * 0.4));
+		GFMARK = new FlxSprite(90 + 105, 620).loadGraphic(Paths.image('characterChooser/SkinSelectorThings'));
+		GFMARK.frames = Paths.getSparrowAtlas('characterChooser/SkinSelectorThings');
+        GFMARK.setGraphicSize(Std.int(GFMARK.width * 0.4));
 		GFMARK.animation.addByPrefix('Question', 'QuestionMark', 24, true);
 		GFMARK.animation.addByPrefix('accepted', 'silly', 24, false);
 		GFMARK.animation.play('Question');
 		GFMARK.updateHitbox();
-                add(GFMARK);
+        add(GFMARK);
 
-                GFMARK.visible = false;
-
-               
+        GFMARK.visible = false;
 
 		images = [];
         if (PlayState.SONG.meta.name != 'swatting') {
-        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterSelection/Boyfriend_Assets.png')));
-        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterSelection/BFDistrict.png')));
-        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterSelection/Boyfriend_Assets_dom.png')));
+        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterChooser/characters/Boyfriend_Assets.png')));
+        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterChooser/characters/BFDistrict.png')));
+        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterChooser/characters/Boyfriend_Assets_dom.png')));
         }
 
         if (PlayState.SONG.meta.name == 'swatting')
         {
-        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterSelection/pico.png')));
-        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterSelection/DistrictPico.png')));
-        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterSelection/picohouse.png')));
+        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterChooser/characters/pico.png')));
+        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterChooser/characters/DistrictPico.png')));
+        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterChooser/characters/picohouse.png')));
         }
         currentIndex = 0;
 
-
         add(images[currentIndex]);
-
-        
 
         for (image in images) {
             image.x = (FlxG.width - image.width) / 2;
@@ -187,7 +168,8 @@ var flash = new FlxSprite();
                         flash.alpha = 0;
 
 	}
-    public function nextImage():Void {
+
+function nextImage():Void {
         remove(images[currentIndex]);
 
         currentIndex++;
@@ -199,7 +181,8 @@ var flash = new FlxSprite();
         }
         add(images[currentIndex]);
     }
-    public function previousImage():Void {
+
+function previousImage():Void {
         remove(images[currentIndex]);
         currentIndex--;
 
@@ -211,7 +194,8 @@ var flash = new FlxSprite();
         }
         add(images[currentIndex]);
     }
-    public function changestuff():Void {
+
+function changestuff():Void {
         if (currentIndex == 0) {
             imageText.text = "DEFAULT";
             arrow2.visible = false;
@@ -228,9 +212,9 @@ var flash = new FlxSprite();
                 arrow1.visible = true;
                 }
     }
-	override function update(elapsed:Float)
-        {
-                
+
+function update(elapsed:Float)
+        {   
 			if (PlayState.SONG.meta.name == 'renovation')
 				{
 					FlxG.switchState(new PlayState());
@@ -256,11 +240,6 @@ var flash = new FlxSprite();
                 currentBarrier = 0;
                 barrierShake = 0;
             }
-                
-
-
-
-		
 
 		if (controls.RIGHT_P && fifigej && canmove)
 		{
@@ -281,9 +260,8 @@ var flash = new FlxSprite();
                 FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
                 };
 
-
-                if (controls.ACCEPT && fifigej && canmove && !selectingbf)
-                {
+        if (controls.ACCEPT && fifigej && canmove && !selectingbf)
+        {
 
                 FlxG.sound.play(Paths.sound('menu/confirm'));
                 FlxFlicker.flicker(bg2, 1, 0.09, false);
@@ -295,60 +273,45 @@ var flash = new FlxSprite();
                 FlxTween.tween(FlxG.camera, { zoom: 1 }, 0.5, { ease: FlxEase.cubeOut } );
                 selectingbf = false;
        
-		GFMARK.animation.play('accepted');
-                    
-                    icongf.loadGraphic(Paths.image('cc/icons/gf'));
-                    iconbf.loadGraphic(Paths.image('cc/icons/Boyfriend'));
+		GFMARK.animation.play('accepted');     
+                    icongf.loadGraphic(Paths.image('characterChooser/icons/gf'));
+                    iconbf.loadGraphic(Paths.image('characterChooser/icons/Boyfriend'));
                     iconbf.alpha = 0.5;
                     icongf.alpha = 0.5;
-
-
-                 if (PlayState.SONG.meta.name != 'renovation')
+        if (PlayState.SONG.meta.name != 'renovation')
                         {
                              new FlxTimer().start(1, function(tmr:FlxTimer)
                                         {
                                            FlxG.switchState(new PlayState());
                                         });
                         }
-                 }
-
-
-        
-
-
-
+        }
 
                 if (controls.ACCEPT && fifigej && canmove && selectingbf)
                 {
-
                 FlxG.sound.play(Paths.sound('menu/confirm'));
                 FlxFlicker.flicker(bg2, 1, 0.09, false);
                 flash.alpha = 1;
-GFMARK.visible = true;
-canmove = true;
-      FlxG.camera.zoom = 1.2;
-FlxTween.tween(flash, { alpha: 0 }, 1, { ease: FlxEase.cubeOut } );
-FlxTween.tween(FlxG.camera, { zoom: 1 }, 0.5, { ease: FlxEase.cubeOut } );
-        selectingbf = false;
+        GFMARK.visible = true;
+                canmove = true;
+                FlxG.camera.zoom = 1.2;
+                FlxTween.tween(flash, { alpha: 0 }, 1, { ease: FlxEase.cubeOut } );
+                FlxTween.tween(FlxG.camera, { zoom: 1 }, 0.5, { ease: FlxEase.cubeOut } );
+                selectingbf = false;
 
 		BFMARK.animation.play('accepted');
                     curSelectedPlayer = 'gf';
-                    icongf.loadGraphic(Paths.image('cc/icons/gfselected'));
-                    iconbf.loadGraphic(Paths.image('cc/icons/Boyfriend'));
+                    icongf.loadGraphic(Paths.image('characterChooser/icons/gfselected'));
+                    iconbf.loadGraphic(Paths.image('characterChooser/icons/Boyfriend'));
                     iconbf.alpha = 0.5;
                     icongf.alpha = 1;
         remove(images[currentIndex]);
-images = [];
+        images = [];
 
-
-
-        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterSelection/GF.png')));
-        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterSelection/GFDistrict.png')));
-        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterSelection/HouseGF.png')));
-
-
+        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterChooser/characters/GF.png')));
+        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterChooser/characters/GFDistrict.png')));
+        images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterChooser/characters/HouseGF.png')));
         add(images[currentIndex]);
-
 
         for (image in images) {
             image.x = (FlxG.width - image.width) / 2;
@@ -357,7 +320,6 @@ images = [];
 
     }
 }
-
 
         if (PlayState.SONG.meta.name != 'swatting')
         {
@@ -382,9 +344,6 @@ images = [];
         }
         }
 
-
-
-
 		if ((controls.ACCEPT || controls.BACK) && !fifigej)
 			{
 				FlxTween.tween(barrierWarningScreen, {alpha: 0}, 1.5, {onComplete: function(twn:FlxTween)
@@ -399,12 +358,13 @@ images = [];
 			}
 
 	}
-	function changeSelection(change:Int = 0)
+
+function changeSelection(change:Int = 0)
 	{
 		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 	}
 
-	public function barrierWarning():Void {
+function barrierWarning():Void {
         fifigej = false;
         
         barrierWarningScreen = new FlxSprite();
@@ -418,9 +378,9 @@ images = [];
 		barrierWarningText.setBorderStyle(FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 2);
 		barrierWarningText.screenCenter(Y);
 		add(barrierWarningText);
-        }
+    }
         
-    public function barrierImage():Void {
+function barrierImage():Void {
         currentBarrier = currentBarrier + 1;
         barrierShake = barrierShake + 0.001;
         FlxG.camera.shake(0.005 + barrierShake, 0.15);
