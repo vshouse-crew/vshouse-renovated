@@ -1,13 +1,13 @@
 <!DOCTYPE codename-engine-character>
-<character x="100" icon="picohouse" camx="-100" y="300" isGF="false" color="#000000" flipX="true" isPlayer="true" gameOverChar="picohousedead" sprite="picodom">
+<character x="100" icon="picohouse" camx="-100" y="300" isGF="false" color="#B7D855" flipX="true" isPlayer="true" gameOverChar="picohousedead" sprite="picodom">
 	<anim x="0" loop="false" y="0" fps="24" anim="Pico Idle Dance" name="idle"/>
-	<anim x="-55" loop="false" y="-13" fps="24" anim="Pico Note Right0" name="singLEFT"/>
+	<anim x="-55" loop="false" y="-11" fps="24" anim="Pico Note Right0" name="singLEFT"/>
 	<anim x="90" loop="false" y="-75" fps="24" anim="Pico Down Note0" name="singDOWN"/>
 	<anim x="12" loop="false" y="54" fps="24" anim="pico Up note0" name="singUP"/>
 	<anim x="81" loop="false" y="-9" fps="24" anim="Pico NOTE LEFT0" name="singRIGHT"/>
-	<anim x="-54" loop="false" y="26" fps="24" anim="Pico Note Right Miss" name="singLEFTmiss"/>
+	<anim x="-54" loop="false" y="28" fps="24" anim="Pico Note Right Miss" name="singLEFTmiss"/>
 	<anim x="77" loop="false" y="-31" fps="24" anim="Pico Down Note MISS" name="singDOWNmiss"/>
 	<anim x="15" loop="false" y="124" fps="24" anim="pico Up note miss" name="singUPmiss"/>
-	<anim x="75" loop="false" y="25" fps="24" anim="Pico NOTE LEFT miss" name="singRIGHTmiss"/>
+	<anim x="74" loop="false" y="24" fps="24" anim="Pico NOTE LEFT miss" name="singRIGHTmiss"/>
 	<anim x="419" loop="false" y="83" fps="24" anim="Shot" name="shot"/>
 </character>
