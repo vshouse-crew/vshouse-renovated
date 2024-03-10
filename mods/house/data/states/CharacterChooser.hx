@@ -275,11 +275,12 @@ import flixel.text.FlxText.FlxTextAlign;
         barrierWarningScreen.alpha = 0.5;
         add(barrierWarningScreen);
 
-        barrierWarningText = new FlxText(FlxG.width/2-100, FlxG.height/2-50, 200, "zesralem sie");
-        barrierWarningText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE);
-        barrierWarningText.alignment = FlxTextAlign.CENTER;
-        barrierWarningText.setBorderStyle(FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 2);
-        add(barrierWarningText);
+		barrierWarningText = new FlxText(0, 0, FlxG.width, "Do NOT ever do that again.\n\nPress ENTER to dismiss", 32);
+		barrierWarningText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE);
+		barrierWarningText.alignment = FlxTextAlign.CENTER;
+		barrierWarningText.setBorderStyle(FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 2);
+		barrierWarningText.screenCenter(Y);
+		add(barrierWarningText);
         }
         
     public function barrierImage():Void {
