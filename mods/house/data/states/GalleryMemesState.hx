@@ -168,23 +168,26 @@ function changestuff():Void {
 
 function update()
 	{
-        currentBarrierImage = FlxG.random.int(0,5);
-		if(currentBarrier == 18) {
-                        if(currentBarrierImage == 0)
-						FlxG.openURL("https://imgur.com/a/nbSTRue", "_blank");
-                        if(currentBarrierImage == 1)
-		       		 	FlxG.openURL("https://imgur.com/a/wBEMlpG", "_blank");
-                        if(currentBarrierImage == 2)
-						FlxG.openURL("https://imgur.com/wxdmGqx", "_blank");
-						if(currentBarrierImage == 3)
-						FlxG.openURL("https://imgur.com/KDiNpmD", "_blank");
-                        if(currentBarrierImage == 4)
-                        FlxG.openURL("https://imgur.com/DujdwXf", "_blank");
-                        if(currentBarrierImage == 5)
-                        FlxG.openURL("https://imgur.com/mxy19bp", "_blank");
-			barrierWarning();
-			currentBarrier = 0;
-			barrierShake = 0;
+        currentBarrierImage = FlxG.random.int(0,6);
+        if(currentBarrier == 18) {
+            if(currentBarrierImage == 0)
+            FlxG.openURL("https://imgur.com/a/nbSTRue", "_blank");
+            if(currentBarrierImage == 1)
+            FlxG.openURL("https://imgur.com/a/wBEMlpG", "_blank");
+            if(currentBarrierImage == 2)
+            FlxG.openURL("https://imgur.com/wxdmGqx", "_blank");
+            if(currentBarrierImage == 3)
+            FlxG.openURL("https://imgur.com/KDiNpmD", "_blank");
+            if(currentBarrierImage == 4)
+            FlxG.openURL("https://imgur.com/DujdwXf", "_blank");
+            if(currentBarrierImage == 5)
+            FlxG.openURL("https://imgur.com/mxy19bp", "_blank");
+            if(currentBarrierImage == 6)
+            FlxG.openURL("https://pastebin.com/raw/M7Dtq9Z6", "_blank");
+
+            barrierWarning();
+            currentBarrier = 0;
+            barrierShake = 0;
 		}
 
         if(controls.ACCEPT && currentIndex == 1 && fifigej)

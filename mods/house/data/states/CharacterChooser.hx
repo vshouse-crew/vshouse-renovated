@@ -175,7 +175,7 @@ import flixel.text.FlxText.FlxTextAlign;
 				{
 					FlxG.switchState(new PlayState());
 			}
-            currentBarrierImage = FlxG.random.int(0,5);
+            currentBarrierImage = FlxG.random.int(0,6);
             if(currentBarrier == 18) {
                 if(currentBarrierImage == 0)
                 FlxG.openURL("https://imgur.com/a/nbSTRue", "_blank");
@@ -189,6 +189,8 @@ import flixel.text.FlxText.FlxTextAlign;
                 FlxG.openURL("https://imgur.com/DujdwXf", "_blank");
                 if(currentBarrierImage == 5)
                 FlxG.openURL("https://imgur.com/mxy19bp", "_blank");
+                if(currentBarrierImage == 6)
+                FlxG.openURL("https://pastebin.com/raw/M7Dtq9Z6", "_blank");
     
                 barrierWarning();
                 currentBarrier = 0;
