@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SkinSelectorThings.png">
+	<!-- Created with Adobe Animate version 20.0.2.22168 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="QuestionMark0000" x="0" y="0" width="97" height="150" frameX="0" frameY="-1" frameWidth="98" frameHeight="151"/>
+	<SubTexture name="QuestionMark0001" x="97" y="0" width="97" height="150" frameX="0" frameY="-1" frameWidth="98" frameHeight="151"/>
+	<SubTexture name="QuestionMark0002" x="194" y="0" width="97" height="150" frameX="0" frameY="-1" frameWidth="98" frameHeight="151"/>
+	<SubTexture name="QuestionMark0003" x="291" y="0" width="97" height="150" frameX="0" frameY="-1" frameWidth="98" frameHeight="151"/>
+	<SubTexture name="QuestionMark0004" x="388" y="0" width="98" height="151"/>
+	<SubTexture name="QuestionMark0005" x="486" y="0" width="98" height="151"/>
+	<SubTexture name="QuestionMark0006" x="584" y="0" width="98" height="151"/>
+	<SubTexture name="QuestionMark0007" x="682" y="0" width="98" height="151"/>
+	<SubTexture name="QuestionMark0008" x="780" y="0" width="98" height="151"/>
+	<SubTexture name="QuestionMark0009" x="878" y="0" width="97" height="150" frameX="0" frameY="-1" frameWidth="98" frameHeight="151"/>
+	<SubTexture name="QuestionMark0010" x="0" y="151" width="97" height="150" frameX="0" frameY="-1" frameWidth="98" frameHeight="151"/>
+	<SubTexture name="QuestionMark0011" x="97" y="151" width="97" height="150" frameX="0" frameY="-1" frameWidth="98" frameHeight="151"/>
+	<SubTexture name="QuestionMark0012" x="194" y="151" width="97" height="150" frameX="0" frameY="-1" frameWidth="98" frameHeight="151"/>
+	<SubTexture name="QuestionMark0013" x="291" y="151" width="97" height="150" frameX="0" frameY="-1" frameWidth="98" frameHeight="151"/>
+	<SubTexture name="silly0000" x="388" y="151" width="31" height="33" frameX="-1" frameY="-85" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0001" x="419" y="151" width="31" height="33" frameX="-1" frameY="-85" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0002" x="450" y="151" width="31" height="33" frameX="0" frameY="-84" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0003" x="481" y="151" width="31" height="33" frameX="0" frameY="-84" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0004" x="512" y="151" width="61" height="75" frameX="-1" frameY="-85" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0005" x="573" y="151" width="61" height="75" frameX="-1" frameY="-85" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0006" x="634" y="151" width="64" height="78" frameX="-1" frameY="-85" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0007" x="698" y="151" width="64" height="78" frameX="-1" frameY="-85" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0008" x="762" y="151" width="85" height="78" frameX="-1" frameY="-85" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0009" x="847" y="151" width="85" height="78" frameX="-1" frameY="-85" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0010" x="0" y="301" width="112" height="163" frameX="-1" frameY="0" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0011" x="112" y="301" width="112" height="163" frameX="-1" frameY="0" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0012" x="224" y="301" width="110" height="153" frameX="-1" frameY="-10" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0013" x="334" y="301" width="110" height="153" frameX="-1" frameY="-10" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0014" x="444" y="301" width="110" height="151" frameX="-1" frameY="-12" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0015" x="554" y="301" width="110" height="151" frameX="-1" frameY="-12" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0016" x="664" y="301" width="110" height="151" frameX="-1" frameY="-12" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0017" x="774" y="301" width="110" height="151" frameX="-1" frameY="-12" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0018" x="884" y="301" width="110" height="151" frameX="-1" frameY="-12" frameWidth="113" frameHeight="163"/>
+	<SubTexture name="silly0019" x="0" y="464" width="110" height="151" frameX="-1" frameY="-12" frameWidth="113" frameHeight="163"/>
+</TextureAtlas>
