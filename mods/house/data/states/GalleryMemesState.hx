@@ -187,27 +187,11 @@ function update()
 			barrierShake = 0;
 		}
 
-        // if(controls.ACCEPT && currentIndex == 1 && fifigej)
-        //     {
-        //         PlayState.storyPlaylist = ["multiversus"];
-        //         PlayState.isStoryMode = false;
-        //         PlayState.seenCutscene = false;
-        
-        //         var diffic = "";
-        
-        //         PlayState.storyDifficulty = 0;
-        
-        //         PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
-        //         PlayState.storyWeek = 1;
-        //         PlayState.campaignScore = 0;
-        //         PlayState.campaignMisses = 0;
-        //         new FlxTimer().start(0.5, function(tmr:FlxTimer)
-        //         {
-        //             LoadingState.loadAndSwitchState(new PlayState());
-        //             FlxG.sound.music.volume = 0;
-        //             FreeplayState.destroyFreeplayVocals();
-        //         });
-        //     }                    nie dziala bo psych kupa
+        if(controls.ACCEPT && currentIndex == 1 && fifigej)
+            {
+                PlayState.loadSong('multiversus', 'normal', false, false);
+                FlxG.switchState(new PlayState());
+            }          
 
 		if (controls.LEFT_P && fifigej)
 		{

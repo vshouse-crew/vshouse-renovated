@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="renovation_warning.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="jajco0000" x="0" y="0" width="1213" height="811" frameX="0" frameY="0" frameWidth="1213" frameHeight="812"/>
+	<SubTexture name="jajco0001" x="0" y="0" width="1213" height="811" frameX="0" frameY="0" frameWidth="1213" frameHeight="812"/>
+	<SubTexture name="jajco0002" x="0" y="0" width="1213" height="811" frameX="0" frameY="0" frameWidth="1213" frameHeight="812"/>
+	<SubTexture name="jajco0003" x="0" y="0" width="1213" height="811" frameX="0" frameY="0" frameWidth="1213" frameHeight="812"/>
+	<SubTexture name="jajco0004" x="0" y="811" width="1213" height="811" frameX="0" frameY="-1" frameWidth="1213" frameHeight="812"/>
+	<SubTexture name="jajco0005" x="0" y="811" width="1213" height="811" frameX="0" frameY="-1" frameWidth="1213" frameHeight="812"/>
+	<SubTexture name="jajco0006" x="0" y="811" width="1213" height="811" frameX="0" frameY="-1" frameWidth="1213" frameHeight="812"/>
+	<SubTexture name="jajco0007" x="0" y="811" width="1213" height="811" frameX="0" frameY="-1" frameWidth="1213" frameHeight="812"/>
+</TextureAtlas>
