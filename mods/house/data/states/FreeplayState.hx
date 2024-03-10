@@ -5,7 +5,6 @@ function create() {
 	trace(FlxG.save.data.renovationLock);
 	trace(FlxG.save.data.multiversusLock);
 	trace(FlxG.save.data.fundamentLock);
-	trace(PlayState.SONG.meta.name);
 
 	if(FlxG.save.data.renovationLock == 'unlocked')
 		{
