@@ -9,7 +9,12 @@ function onSelectItem(e) {
         FlxG.switchState(new ModState("GalleryChooseState"));
         e.cancel();
     }
+    if (e.name == "ost") {
+        FlxG.switchState(new ModState("OSTState"));
+        e.cancel();
+    }
 }
+
 function update(elapsed) {
 	trace(curSelected);
 
@@ -21,7 +26,7 @@ function onChangeItem() {
 				{
 				if (curSelected <= 0)
                       {
-						spr.y = spr.y - (4 * 50);
+						spr.y = spr.y - (5 * 50);
 					  }
 					  else
 					  {
@@ -30,9 +35,9 @@ function onChangeItem() {
 				}
 			if (controls.DOWN_P) 
 				{
-					if (curSelected >= 4)
+					if (curSelected >= 5)
 						{
-						  spr.y = spr.y + (4 * 50);
+						  spr.y = spr.y + (5 * 50);
 						}
 						else
 						{

@@ -1,5 +1,6 @@
 story mode
 freeplay
-options
 gallery
+ost
+options
 donate
