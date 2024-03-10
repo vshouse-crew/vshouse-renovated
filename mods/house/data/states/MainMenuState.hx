@@ -26,22 +26,22 @@ function onChangeItem() {
 				{
 				if (curSelected <= 0)
                       {
-						spr.y = spr.y - (5 * 50);
+						spr.y = spr.y - (5 * 650);
 					  }
 					  else
 					  {
-						spr.y = spr.y + 50;
+						spr.y = spr.y + 60;
 					  }
 				}
 			if (controls.DOWN_P) 
 				{
 					if (curSelected >= 5)
 						{
-						  spr.y = spr.y + (5 * 50);
+						  spr.y = spr.y + (5 * 60);
 						}
 						else
 						{
-						  spr.y = spr.y - 50;
+						  spr.y = spr.y - 60;
 						}
 				}
 		});

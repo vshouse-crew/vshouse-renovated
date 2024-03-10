@@ -54,6 +54,7 @@ var barrierShake:Float;
 
 var curSelectedSkin:String;
 var currentIndex:Int;
+var currentGF:Int;
 var imageText:FlxText;
 var kakaText:FlxText;
 var X:FlxAxes = 0x01;
@@ -154,8 +155,15 @@ function create()
         images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterChooser/characters/picohouse.png')));
         }
         currentIndex = 0;
-
+		currentIndexGF = currentIndex;
+		if(selectingbf)
+			{
         add(images[currentIndex]);
+			}
+			else
+			{
+				add(images[currentIndexGF]);
+			}
 
         for (image in images) {
             image.x = (FlxG.width - image.width) / 2;
@@ -170,51 +178,127 @@ function create()
 	}
 
 function nextImage():Void {
-        remove(images[currentIndex]);
+	if(selectingbf)
+		{
+			remove(images[currentIndex]);
+		}
+		else
+		{
+			remove(images[currentIndexGF]);
+		}
 
+		if(selectingbf)
+			{
         currentIndex++;
-        if (currentIndex >= images.length) {
+			}
+			else
+			{	
+		currentIndexGF++;
+			}
+        if (currentIndex >= images.length && selectingbf) {
+			trace('chujdużo');
                         FlxG.sound.play(Paths.sound('error'), 0.9);
                         FlxG.camera.shake(0.005, 0.15);
                         currentIndex = currentIndex - 1;
                         barrierImage();
         }
+		if (currentIndexGF >= images.length) {
+			trace('cipadużo');
+			FlxG.sound.play(Paths.sound('error'), 0.9);
+			FlxG.camera.shake(0.005, 0.15);
+			currentIndexGF = currentIndexGF - 1;
+			barrierImage();
+}
+		if(selectingbf)
+			{
         add(images[currentIndex]);
+			}
+			else
+			{
+				add(images[currentIndexGF]);
+			}
     }
 
 function previousImage():Void {
-        remove(images[currentIndex]);
+	if(selectingbf)
+		{
+			remove(images[currentIndex]);
+		}
+		else
+		{
+			remove(images[currentIndexGF]);
+		}
+		if(selectingbf)
+			{
         currentIndex--;
+			}
+			else
+			{
+		currentIndexGF--;
+			}
 
         if (currentIndex < 0) {
+			trace('chujmało');
                         FlxG.sound.play(Paths.sound('error'), 0.9);
                         FlxG.camera.shake(0.005, 0.15);
                         currentIndex = currentIndex + 1;
                         barrierImage();
         }
+		if (currentIndexGF < 0) {
+			trace('cipamało');
+			FlxG.sound.play(Paths.sound('error'), 0.9);
+			FlxG.camera.shake(0.005, 0.15);
+			currentIndexGF = currentIndexGF + 1;
+			barrierImage();
+}
+
+		if(selectingbf)
+			{
         add(images[currentIndex]);
-    }
+			}
+			else
+			{
+				add(images[currentIndexGF]);
+			}
+		}
 
 function changestuff():Void {
-        if (currentIndex == 0) {
-            imageText.text = "DEFAULT";
-            arrow2.visible = false;
-            } else {
-            arrow2.visible = true;
-            }
-            if (currentIndex == 1) {
-                imageText.text = "DISTRICT";
-            }
-            if (currentIndex == 2) {
-                imageText.text = "HOUSE";
-                arrow1.visible = false;
-                } else {
-                arrow1.visible = true;
-                }
     }
 
 function update(elapsed:Float)
         {   
+			if(selectingbf)
+				{
+			if (currentIndex == 0) {
+				imageText.text = "DEFAULT";
+				arrow2.visible = false;
+			}
+				if (currentIndex == 1) {
+					imageText.text = "DISTRICT";
+					arrow2.visible = true;
+					arrow1.visible = true;
+				}
+				if (currentIndex == 2) {
+					imageText.text = "HOUSE";
+					arrow1.visible = false;
+				}
+			}
+			else
+				{
+				if (currentIndexGF == 0) {
+					imageText.text = "DEFAULT";
+					arrow2.visible = false;
+				}
+					if (currentIndexGF == 1) {
+						imageText.text = "DISTRICT";
+						arrow2.visible = true;
+						arrow1.visible = true;
+					}
+					if (currentIndexGF == 2) {
+						imageText.text = "HOUSE";
+						arrow1.visible = false;
+					}
+				}
 			if (PlayState.SONG.meta.name == 'renovation')
 				{
 					FlxG.switchState(new PlayState());
@@ -300,14 +384,14 @@ function update(elapsed:Float)
                 selectingbf = false;
 
 		BFMARK.animation.play('accepted');
+		remove(images[currentIndex]);
+		currentIndexGF = currentIndex;
                     curSelectedPlayer = 'gf';
                     icongf.loadGraphic(Paths.image('characterChooser/icons/gfselected'));
                     iconbf.loadGraphic(Paths.image('characterChooser/icons/Boyfriend'));
                     iconbf.alpha = 0.5;
                     icongf.alpha = 1;
-        remove(images[currentIndex]);
         images = [];
-
         images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterChooser/characters/GF.png')));
         images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterChooser/characters/GFDistrict.png')));
         images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterChooser/characters/HouseGF.png')));
@@ -324,12 +408,22 @@ function update(elapsed:Float)
         if (PlayState.SONG.meta.name != 'swatting')
         {
         if (currentIndex == 0) {
+			PlayState.SONG.strumLines[1].characters = ['bf'];
         }
         if (currentIndex == 1) {
 			PlayState.SONG.strumLines[1].characters = ['bfdistrict'];
         }
         if (currentIndex == 2) {
 			PlayState.SONG.strumLines[1].characters = ['bfhouse'];
+        }
+		if (currentIndexGF == 0) {
+			PlayState.SONG.strumLines[2].characters = ['gf'];
+        }
+        if (currentIndexGF == 1) {
+			PlayState.SONG.strumLines[2].characters = ['gfdistrict'];
+        }
+        if (currentIndexGF == 2) {
+			PlayState.SONG.strumLines[2].characters = ['gfhouse'];
         }
         }
         if (PlayState.SONG.meta.name == 'swatting')
@@ -385,5 +479,3 @@ function barrierImage():Void {
         barrierShake = barrierShake + 0.001;
         FlxG.camera.shake(0.005 + barrierShake, 0.15);
     }
-
-    

@@ -76,7 +76,7 @@ tween = FlxTween.tween(bgThing, {x: -500}, 1, {
 tween2 = FlxTween.tween(iconn, {x: 320}, 1, {
 		ease: FlxEase.cubeOut,
 	});
-	tween3 = FlxTween.tween(funnitext, {x: 500}, 1, {
+	tween3 = FlxTween.tween(funnitext, {x: 50}, 1, {
 		ease: FlxEase.cubeOut,
 	});
 	
