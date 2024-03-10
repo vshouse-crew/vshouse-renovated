@@ -38,7 +38,7 @@ function onSelect(e) {
 
 	PlayState.loadSong(e.song, e.difficulty, e.opponentMode, e.coopMode);
 	trace(PlayState.SONG.meta.name);
-	if (PlayState.SONG.meta.name == 'renovation' || PlayState.SONG.meta.name == 'swatting' || PlayState.SONG.meta.name == 'fundament' || PlayState.SONG.meta.name == 'house')
+	if (PlayState.SONG.meta.name == 'renovation' || PlayState.SONG.meta.name == 'multiversus' || PlayState.SONG.meta.name == 'fundament' || PlayState.SONG.meta.name == 'house')
 		{
 			FlxG.switchState(new PlayState());
 	}
