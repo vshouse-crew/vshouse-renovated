@@ -435,7 +435,7 @@ function update(elapsed:Float)
         if (PlayState.SONG.meta.name != 'swatting')
         {
         if (currentIndex == 0) {
-			PlayState.SONG.strumLines[1].characters = ['bf'];
+			PlayState.SONG.strumLines[1].characters = ['modbf'];
         }
         if (currentIndex == 1) {
 			PlayState.SONG.strumLines[1].characters = ['bfdistrict'];
