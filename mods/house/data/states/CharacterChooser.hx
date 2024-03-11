@@ -387,7 +387,6 @@ function update(elapsed:Float)
                 {
         if(PlayState.SONG.meta.name == 'swatting')
 			{
-				canmove = true;
 				FlxG.sound.play(Paths.sound('menu/confirm'));
 				FlxFlicker.flicker(bg2, 1, 0.09, false);
 				flash.alpha = 1;
