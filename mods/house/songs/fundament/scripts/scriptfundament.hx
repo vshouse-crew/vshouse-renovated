@@ -31,6 +31,10 @@ SexyTween = FlxTween.tween(obrazek1, {alpha: 1},1.5, {
 SexyTimer = new FlxTimer().start(4.65, function(tmr:FlxTimer) {
 	SexyTween = FlxTween.tween(obrazek1, {alpha: 0},1.5, {
 		ease: FlxEase.cubeInOut,
+		onComplete: function(twn:FlxTween)
+			{
+				obrazek1.destroy();
+			}
 	});
 });
 SexyTimer = new FlxTimer().start(23.77, function(tmr:FlxTimer) {
@@ -173,7 +177,7 @@ if(curBeat == 16)
 								{
 									SexyTween = FlxTween.tween(dad, {alpha: 0},23.77, {
 									});
-									SexyTween = FlxTween.tween(camHUD, {alpha: 0},23.77, {
+									SexyTween = FlxTween.tween(iconP2, {alpha: 0},23.77, {
 									});
 								}
 							}

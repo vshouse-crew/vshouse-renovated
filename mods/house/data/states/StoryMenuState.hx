@@ -6,6 +6,11 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 
 function postCreate() {
-    @:access(funkin.menus.StoryMenuState)StoryMenuState.rightArrow.alpha = 0;
-    StoryMenuState.leftArrow.visible = false;
+	
+	black = new FlxSprite(leftArrow.x, leftArrow.y).makeGraphic(500, 100, 0xFF000000);
+	add(black);
+
+    leftArrow.visible = false;
+	rightArrow.visible = false;
+	
 }
