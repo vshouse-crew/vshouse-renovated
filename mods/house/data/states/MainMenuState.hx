@@ -26,7 +26,7 @@ function onChangeItem() {
 				{
 				if (curSelected <= 0)
                       {
-						spr.y = spr.y - (5 * 650);
+						spr.y = spr.y - (5 * 60);
 					  }
 					  else
 					  {
