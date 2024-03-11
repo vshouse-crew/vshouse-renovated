@@ -20,9 +20,10 @@ function onSelectItem(e) {
 function update(elapsed) {
 if (FlxG.keys.justPressed.F10) 
 		{
-             FlxG.switchState(new ModState("sillystate"));
+             FlxG.switchState(new ModState("SecretState"));
                  FlxG.sound.music.volume = 0;
                 }
+// nooo dont look at dis... cring, cring..
 
 }
 function onChangeItem() {
