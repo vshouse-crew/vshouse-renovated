@@ -1,3 +1,4 @@
+	
 import flixel.util.FlxAxes;
 
 var X:FlxAxes = 0x01;
@@ -16,10 +17,14 @@ function onSelectItem(e) {
     }
 }
 
-// function update(elapsed) {
-// 	trace(curSelected);
+function update(elapsed) {
+if (FlxG.keys.justPressed.F10) 
+		{
+             FlxG.switchState(new ModState("sillystate"));
+                 FlxG.sound.music.volume = 0;
+                }
 
-// }
+}
 function onChangeItem() {
 	menuItems.forEach(function(spr:FlxSprite)
 		{
