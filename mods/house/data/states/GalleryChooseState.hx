@@ -36,7 +36,7 @@ function create()
 	{
 		currentBarrier = 0;
 		fifigej = true;
-
+		// FlxG.sound.playMusic(Paths.music('gallerySong'), 0.7); that was stupid
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/menuBG'));
 		bg.scrollFactor.set();
 		add(bg);
@@ -134,8 +134,9 @@ function update()
 		{
 				FlxG.sound.music.fadeIn(0.5, 0.7, 0);
 				FlxG.switchState(new MainMenuState());
+				FlxG.sound.play(Paths.sound('cancelMenu'), 0.4);
             // new FlxTimer().start(0.5, function(tmr:FlxTimer) {
-			// 	FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
+				FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
             //     FlxG.switchState(new MainMenuState());
             // });
 		}

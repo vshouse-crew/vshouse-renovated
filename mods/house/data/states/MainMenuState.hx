@@ -7,6 +7,7 @@ var XY:FlxAxes = 0x11;
 function onSelectItem(e) {
     if (e.name == "gallery") {
         FlxG.switchState(new ModState("GalleryChooseState"));
+		FlxG.sound.playMusic(Paths.music('gallerySong'), 0.7);
         e.cancel();
     }
     if (e.name == "ost") {
@@ -15,10 +16,10 @@ function onSelectItem(e) {
     }
 }
 
-function update(elapsed) {
-	trace(curSelected);
+// function update(elapsed) {
+// 	trace(curSelected);
 
-}
+// }
 function onChangeItem() {
 	menuItems.forEach(function(spr:FlxSprite)
 		{

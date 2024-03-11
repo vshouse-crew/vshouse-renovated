@@ -15,7 +15,6 @@ import flixel.text.FlxText.FlxTextFormat;
 import flixel.text.FlxText.FlxTextFormatMarkerPair;
 import flixel.text.FlxText.FlxTextBorderStyle;
 
-
 var images:Array<FlxSprite>;
 var logoBl:FlxSprite;
 var text:Alphabet;
@@ -44,7 +43,6 @@ function create()
         images.push(new FlxSprite().loadGraphic(Paths.getPath('images/gallery/concepts/4.png')));
         images.push(new FlxSprite().loadGraphic(Paths.getPath('images/gallery/concepts/5.png')));
 
-
 	bg.scrollFactor.set();
 	add(bg);
 
@@ -58,7 +56,8 @@ function create()
 
         add(images[currentIndex]);
 
-        for (image in images) {
+        for (image in images) 
+        {
             image.x = (FlxG.width - image.width) / 2;
             image.y = (FlxG.height - image.height) / 2;
             image.setSize(100, 100);
@@ -78,20 +77,21 @@ function create()
 		add(selectorRight);
     }
 
-        function sayHello(timer:FlxTimer)
-        {
-            timer.start(0.3, sayHello1);
-            logoBl.loadGraphic(Paths.getPath('images/gallery/ramka1.png'));
-        }
+function sayHello(timer:FlxTimer)
+    {
+        timer.start(0.3, sayHello1);
+        logoBl.loadGraphic(Paths.getPath('images/gallery/ramka1.png'));
+    }
 
-        function sayHello1(timer:FlxTimer)
-        {
-            timer.start(0.3, sayHello);
-            logoBl.loadGraphic(Paths.getPath('images/gallery/ramka2.png'));
-        }
+function sayHello1(timer:FlxTimer)
+    {
+        timer.start(0.3, sayHello);
+        logoBl.loadGraphic(Paths.getPath('images/gallery/ramka2.png'));
+    }
 
 
-    function nextImage():Void {
+function nextImage()
+    {
         remove(images[currentIndex]);
 
         currentIndex++;
@@ -103,7 +103,8 @@ function create()
         add(images[currentIndex]);
     }
 
-    function previousImage():Void {
+function previousImage()
+    {
         remove(images[currentIndex]);
         currentIndex--;
 
@@ -115,7 +116,8 @@ function create()
         add(images[currentIndex]);
     }
 
-    function changestuff():Void {
+function changestuff() 
+    {
         if (currentIndex == 0) {
         imageText.text = "Iconic First House Drawing Made in Gartic Phone by Fr4nk";
         selectorLeft.x = 1200;
@@ -154,7 +156,7 @@ function create()
     }
     
 
-	function update()
+function update()
 	{
         currentBarrierImage = FlxG.random.int(0,6);
         if(currentBarrier == 18) {
@@ -180,69 +182,69 @@ function create()
         
 		if (controls.LEFT_P && fifigej)
 		{
-                        FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
-                        previousImage();
-                        changestuff();
-                        new FlxTimer().start(5, function(tmr:FlxTimer) {
-                            currentBarrier = 0;
-						});
+            FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
+            previousImage();
+            changestuff();
+            new FlxTimer().start(5, function(tmr:FlxTimer) {
+                currentBarrier = 0;
+			});
 		}
-		if (controls.RIGHT_P && fifigej)
+
+        if (controls.RIGHT_P && fifigej)
 		{
-                        FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
+            FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 			nextImage();
-                        changestuff();
-                        new FlxTimer().start(5, function(tmr:FlxTimer) {
-                            currentBarrier = 0;
-						});
+            changestuff();
+            new FlxTimer().start(5, function(tmr:FlxTimer) {
+                currentBarrier = 0;
+			});
 		}
 
         if(controls.ACCEPT && (currentIndex == 0 || currentIndex == 2) && fifigej)
-            {
-                PlayState.loadSong('fundament', 'normal', false, false);
-                FlxG.switchState(new PlayState());
-            }
-            
-
+        {
+            PlayState.loadSong('fundament', 'normal', false, false);
+            FlxG.switchState(new PlayState());
+        }
 
 		if (controls.BACK && fifigej)
 		{
             FlxG.sound.play(Paths.sound('cancelMenu'), 0.4);
             FlxG.switchState(new ModState("GalleryChooseState"));
-
 		}
         
 		if ((controls.ACCEPT || controls.BACK) && !fifigej)
-			{
-				FlxTween.tween(barrierWarningScreen, {alpha: 0}, 1.5, {onComplete: function(twn:FlxTween)
-					{
-						barrierWarningScreen.destroy;
-					}});
-					FlxTween.tween(barrierWarningText, {alpha: 0}, 1.5, {onComplete: function(twn:FlxTween)
-						{
-							barrierWarningText.destroy;
-							fifigej = true;
-						}});
-			}
+		{
+			FlxTween.tween(barrierWarningScreen, {alpha: 0}, 1.5, {onComplete: function(twn:FlxTween)
+				{
+					barrierWarningScreen.destroy;
+				}});
+			FlxTween.tween(barrierWarningText, {alpha: 0}, 1.5, {onComplete: function(twn:FlxTween)
+				{
+					barrierWarningText.destroy;
+					fifigej = true;
+				}});
+		}
 
-        }
+    }
 
-function barrierWarning():Void {
-            fifigej = false;
-                        barrierWarningScreen = new FlxSprite();
-                        barrierWarningScreen.makeGraphic(FlxG.width, FlxG.height, 0xff000000);
-                        barrierWarningScreen.alpha = 0.5;
-                        add(barrierWarningScreen);
+function barrierWarning()
+    {
+        fifigej = false;
+        barrierWarningScreen = new FlxSprite();
+        barrierWarningScreen.makeGraphic(FlxG.width, FlxG.height, 0xff000000);
+        barrierWarningScreen.alpha = 0.5;
+        add(barrierWarningScreen);
             
-                        barrierWarningText = new FlxText(FlxG.width/2-100, FlxG.height/2-50, 200, "zesralem sie");
-                        barrierWarningText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE);
-                        barrierWarningText.alignment = FlxTextAlign.CENTER;
-                        barrierWarningText.setBorderStyle(FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 2);
-                        add(barrierWarningText);
+        barrierWarningText = new FlxText(FlxG.width/2-100, FlxG.height/2-50, 200, "zesralem sie");
+        barrierWarningText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE);
+        barrierWarningText.alignment = FlxTextAlign.CENTER;
+        barrierWarningText.setBorderStyle(FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 2);
+        add(barrierWarningText);
     }
             
-function barrierImage():Void {
-                    currentBarrier = currentBarrier + 1;
-                    barrierShake = barrierShake + 0.001;
-                    FlxG.camera.shake(0.005 + barrierShake, 0.15);
+function barrierImage() 
+    {
+        currentBarrier = currentBarrier + 1;
+        barrierShake = barrierShake + 0.001;
+        FlxG.camera.shake(0.005 + barrierShake, 0.15);
     }
