@@ -63,6 +63,7 @@ var XY:FlxAxes = 0x11;
 
 function create()
 	{
+		Conductor.bpm = 92;
 		currentBarrier = 0;
 		trace(PlayState.SONG.meta.name);
         fifigej = true;
@@ -153,6 +154,10 @@ function create()
         images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterChooser/characters/pico.png')));
         images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterChooser/characters/DistrictPico.png')));
         images.push(new FlxSprite().loadGraphic(Paths.getPath('images/characterChooser/characters/picohouse.png')));
+		iconbf.visible = false;
+		icongf.visible = false;
+		BFMARK.visible = false;
+		GFMARK.visible = false;
         }
         currentIndex = 0;
 		currentIndexGF = currentIndex;
@@ -265,6 +270,12 @@ function previousImage():Void {
 function changestuff():Void {
     }
 
+function beatHit(curBeat) {
+	if(controls.ACCEPT) return;
+	FlxG.camera.zoom += 0.03;
+	FlxTween.tween(FlxG.camera, { zoom: 1 }, 0.2, { ease: FlxEase.cubeOut } );
+}
+
 function update(elapsed:Float)
         {   
 			if(selectingbf)
@@ -340,7 +351,8 @@ function update(elapsed:Float)
 		if (controls.BACK && fifigej)
 		{
                 FlxG.switchState(new FreeplayState());
-                FlxG.sound.music.fadeIn(0.5, 0.7, 0);
+				Conductor.bpm = 102;
+                FlxG.sound.music.fadeIn(0.5, 0.7, 0);			
                 FlxG.sound.playMusic(Paths.music('freakyMenu'), 0.7);
                 };
 
@@ -373,17 +385,33 @@ function update(elapsed:Float)
 
                 if (controls.ACCEPT && fifigej && canmove && selectingbf)
                 {
-                FlxG.sound.play(Paths.sound('menu/confirm'));
-                FlxFlicker.flicker(bg2, 1, 0.09, false);
-                flash.alpha = 1;
-        GFMARK.visible = true;
-                canmove = true;
-                FlxG.camera.zoom = 1.2;
-                FlxTween.tween(flash, { alpha: 0 }, 1, { ease: FlxEase.cubeOut } );
-                FlxTween.tween(FlxG.camera, { zoom: 1 }, 0.5, { ease: FlxEase.cubeOut } );
-                selectingbf = false;
-
+        if(PlayState.SONG.meta.name == 'swatting')
+			{
+				canmove = true;
+				FlxG.sound.play(Paths.sound('menu/confirm'));
+				FlxFlicker.flicker(bg2, 1, 0.09, false);
+				flash.alpha = 1;
+				FlxG.camera.zoom = 1.2;
+				FlxTween.tween(flash, { alpha: 0 }, 1, { ease: FlxEase.cubeOut } );
+				FlxTween.tween(FlxG.camera, { zoom: 1 }, 0.5, { ease: FlxEase.cubeOut } );
+				new FlxTimer().start(1, function(tmr:FlxTimer)
+					{
+					   FlxG.switchState(new PlayState());
+					});
+				
+			}
+			else
+				{
+					FlxG.sound.play(Paths.sound('menu/confirm'));
+					FlxFlicker.flicker(bg2, 1, 0.09, false);
+					flash.alpha = 1;
+					FlxG.camera.zoom = 1.2;
+					FlxTween.tween(flash, { alpha: 0 }, 1, { ease: FlxEase.cubeOut } );
+					FlxTween.tween(FlxG.camera, { zoom: 1 }, 0.5, { ease: FlxEase.cubeOut } );
+					selectingbf = false;
+					canmove = true;
 		BFMARK.animation.play('accepted');
+		GFMARK.visible = true;
 		remove(images[currentIndex]);
 		currentIndexGF = currentIndex;
                     curSelectedPlayer = 'gf';
@@ -400,9 +428,9 @@ function update(elapsed:Float)
         for (image in images) {
             image.x = (FlxG.width - image.width) / 2;
             image.y = (FlxG.height - image.height) / 2;
-            image.setGraphicSize(Std.int(image.width * 0.6));
-
+            image.setGraphicSize(Std.int(image.width * 0.6));		
     }
+}
 }
 
         if (PlayState.SONG.meta.name != 'swatting')
