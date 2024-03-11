@@ -1,13 +1,14 @@
 <!DOCTYPE codename-engine-stage>
 <stage folder="stages/swatting/" zoom="0.6">
-	<sprite x="-3750" sprite="Nieboo" y="-1400" scale="1.2" name="Nieboo"/>
-	<sprite x="-4060" sprite="budynkinoc" y="-2010" scale="1.1" name="budynkinoc"/>
-	<sprite x="-585" sprite="drzewaikrzakitylnoc" y="-255" scale="1.2" name="drzewaikrzakitylnoc"/>
-	<sprite x="-3980" sprite="ziemianoc" y="400" scale="1.1" name="ziemianoc"/>
-	<sprite x="-3575" sprite="krzakiidrzewanoc" y="-2030" scale="1.1" name="krzakiidrzewanoc"/>
-	<sprite x="-500" sprite="domynoc" y="-200" scale="1.1" name="domynoc"/>
-	<sprite x="-590" sprite="plotnoc" y="400" scale="1.1" name="plotnoc"/>
-	<gf x="400" y="130"/>
+	<sprite x="-3535.75" y="-1493.5" sprite="niebonoc" scale="1.2" name="niebonoc"/>
+	<sprite x="-4454.75" y="-1842" sprite="budynkinoc" scale="1.1" name="budynkinoc"/>
+	<sprite x="500" y="-300" sprite="ksiezycnoc" scale="0.9" name="ksiezycnoc"/>
+	<sprite x="-585" y="-230" sprite="drzewaikrzakitylnoc" scale="1.2" name="drzewaikrzakitylnoc"/>
+	<sprite x="-3980" y="400" sprite="ziemianoc" scale="1.1" name="ziemianoc"/>
+	<sprite x="-3553" y="-1943" sprite="krzakiidrzewanoc" scale="1.1" name="krzakiidrzewanoc"/>
+	<sprite x="-500" y="-200" sprite="domynoc" scale="1.1" name="domynoc"/>
+	<sprite x="-590" y="400" sprite="plotnoc" scale="1.1" name="plotnoc"/>
+	<gf x="-1893.75" y="332"/>
 	<dad x="-29" y="198.5"/>
 	<bf x="860.5" y="66"/>
 	<combo/>
