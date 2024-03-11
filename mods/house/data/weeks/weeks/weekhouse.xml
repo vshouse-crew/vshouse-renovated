@@ -4,4 +4,5 @@
 	<song>district</song>
 	<song>dispute</song>
 	<song hide="true">renovation</song>
+	<difficulty name="normal"/>
 </week>
