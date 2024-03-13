@@ -69,21 +69,22 @@ function beatHit(curBeat) {
 	var tween5 = FlxTween.tween(icon, { "scale.x": 1.2 ,"scale.y": 1.2 }, 0.2, {
 		ease: FlxEase.cubeOut,
 	});
-
+        if (beater == 0) {
+                dad.playAnim("Pick");
+        }
         if (beater == 1) {
-        dad.playAnim("Pick");
+                dad.playAnim("Swing");
         FlxG.sound.play(Paths.sound('renovation/warning'));
         dodged = false;
         checkifclicked = true;
         }
 
         if (beater == 2) {
-        dad.playAnim("Swing");
+                dad.playAnim("Throw");
         FlxG.sound.play(Paths.sound('renovation/throw'));
         }
 
         if (beater == 3) {
-        dad.playAnim("Throw");
         lockedIn = false;
         checkifclicked = false;
         if (dodged) {
