@@ -1,6 +1,7 @@
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import funkin.backend.FunkinText;
+import funkin.backend.utils.DiscordUtil;
 
 var bgThing:FlxSprite;
 var iconn:FlxSprite;
@@ -73,6 +74,11 @@ function create() {
 	funnitext3.cameras = [camHUD];
 	add(funnitext3);
 }
+
+updateDiscordPresence = function(){
+	DiscordUtil.changeSongPresence(detailsText, (paused ? "Paused - " : "") + SONG.meta.displayName + ' - ' + curArtist, null);
+}
+
 function onCountdown() {
 	if(curSong != 'fundament')
 		{

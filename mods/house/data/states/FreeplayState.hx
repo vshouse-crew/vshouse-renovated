@@ -30,6 +30,18 @@ function create() {
 
 		
 }
+
+function postCreate(){
+	diffText.visible = false;
+	coopText.y = coopText.y - 29;
+	coopText.alpha = 0;
+	scoreBG.y = scoreBG.y - 25;
+}
+
+function onChangeCoopMode(e){
+	e.cancel();
+}
+
 function onSelect(e) {
 	
 	Options.freeplayLastSong = songs[curSelected].name;
