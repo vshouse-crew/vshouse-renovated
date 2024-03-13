@@ -1,0 +1,21 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/BgSwatting/" zoom="1.05">
+	<sprite x="-3268" name="Sky" sprite="Sky" y="-2950.5"/>
+	<sprite x="-1773" name="city" sprite="city" y="-755"/>
+	<sprite x="-1343" name="idk" sprite="idk" y="-31.5"/>
+	<sprite x="-2553.5" name="flor2" sprite="flor2" y="159"/>
+	<sprite x="-2275.5" name="floor" sprite="floor" y="78.5"/>
+	<sprite x="-677.5" name="idk2" sprite="idk2" y="-137"/>
+	<sprite x="-2043.25" name="crane" sprite="crane" y="-2092.5"/>
+	<sprite x="717" name="idk3" sprite="idk3" y="-209.5"/>
+	<sprite x="1946.5" name="Hotel" sprite="Hotel" y="-1474"/>
+	<sprite x="1088" name="box" sprite="box" y="317.5"/>
+	<sprite x="640.5" name="pneumaticengine" sprite="pneumaticengine" y="222"/>
+	<sprite x="498.5" y="349.5" sprite="speaker" name="speaker"/>
+	<sprite x="418.5" name="sun" sprite="sun" y="-2203.5"/>
+	<gf x="-3278.75" y="-546"/>
+	<bf x="918.5" y="51.5"/>
+	<dad x="-82.5" y="177.5"/>
+	<combo/>
+	<sprite x="-412.5" name="somthing" sprite="somthing" y="459.5"/>
+</stage>

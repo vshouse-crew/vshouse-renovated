@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="speaker.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="speaker — wystąpienie 10000" x="0" y="0" width="400" height="245" pivotX="38.75" pivotY="8.25"/>
+	<SubTexture name="speaker — wystąpienie 10001" x="0" y="0" width="400" height="245"/>
+	<SubTexture name="speaker — wystąpienie 10002" x="400" y="0" width="400" height="245"/>
+	<SubTexture name="speaker — wystąpienie 10003" x="400" y="0" width="400" height="245"/>
+	<SubTexture name="speaker — wystąpienie 10004" x="0" y="245" width="400" height="245"/>
+	<SubTexture name="speaker — wystąpienie 10005" x="0" y="245" width="400" height="245"/>
+	<SubTexture name="speaker — wystąpienie 10006" x="400" y="245" width="400" height="245"/>
+	<SubTexture name="speaker — wystąpienie 10007" x="400" y="245" width="400" height="245"/>
+	<SubTexture name="speaker — wystąpienie 10008" x="0" y="490" width="400" height="245"/>
+	<SubTexture name="speaker — wystąpienie 10009" x="0" y="490" width="400" height="245"/>
+	<SubTexture name="speaker — wystąpienie 10010" x="0" y="490" width="400" height="245"/>
+	<SubTexture name="speaker — wystąpienie 10011" x="0" y="490" width="400" height="245"/>
+	<SubTexture name="speaker — wystąpienie 10012" x="0" y="490" width="400" height="245"/>
+	<SubTexture name="speaker — wystąpienie 10013" x="0" y="490" width="400" height="245"/>
+</TextureAtlas>
