@@ -7,12 +7,12 @@ var XY:FlxAxes = 0x11;
 
 function onSelectItem(e) {
     if (e.name == "gallery") {
-        FlxG.switchState(new ModState("GalleryChooseState"));
+        FlxG.switchState(new ModState("customs/GalleryChooseState"));
 		FlxG.sound.playMusic(Paths.music('gallerySong'), 0.7);
         e.cancel();
     }
     if (e.name == "ost") {
-        FlxG.switchState(new ModState("OSTState"));
+        FlxG.switchState(new ModState("customs/OSTState"));
         e.cancel();
     }
 }
@@ -20,7 +20,7 @@ function onSelectItem(e) {
 function update(elapsed) {
 if (FlxG.keys.justPressed.F10) 
 		{
-             FlxG.switchState(new ModState("SecretState"));
+             FlxG.switchState(new ModState("customs/SecretState"));
                  FlxG.sound.music.volume = 0;
                 }
 // nooo dont look at dis... cring, cring..

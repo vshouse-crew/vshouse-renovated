@@ -17,15 +17,21 @@ var tween7:FlxTween;
 var tween8:FlxTween;
 var tween9:FlxTween;
 var curArtist;
+var txtArtist:Array<Dynamic>;
 
 function create() {
-	trace("testing");
-	curArtist = 'Made By Alien 86';
-	if(curSong == 'district') curArtist = 'Made By Kolze';
-	if(curSong == 'breathe') curArtist = 'Made By Fr4nk';
-	if(curSong == 'renovation') curArtist = 'Made By Bonky';
-	if(curSong == 'fundament') curArtist = 'Made By Fr4nk & Alien 86';
-	if(curSong == 'house') curArtist = 'Made By Top 10 Awesome';
+	txtArtist = ['Alien 86', 0];
+	txtArtist = CoolUtil.coolTextFile(Paths.file('songs/' + curSong + '/artist.txt'));
+	if(txtArtist[1] == null) txtArtist[1] = 0;
+
+	trace(txtArtist);
+	
+	curArtist = 'Made By ' + txtArtist[0];
+	// if(curSong == 'district') curArtist = 'Made By Kolze';
+	// if(curSong == 'breathe') curArtist = 'Made By Fr4nk';
+	// if(curSong == 'renovation') curArtist = 'Made By Bonky';
+	// if(curSong == 'fundament') curArtist = 'Made By Fr4nk & Alien 86';
+	// if(curSong == 'house') curArtist = 'Made By Top 10 Awesome';
 	bgThing = new FlxSprite(-1050, 100).loadGraphic(Paths.image('watermark/blackscreen'));
 	bgThing.alpha = 0.4;
 	bgThing.scale.set(1, 0.2);
@@ -79,25 +85,10 @@ tween2 = FlxTween.tween(iconn, {x: 320}, 1, {
 	tween3 = FlxTween.tween(funnitext, {x: 50}, 1, {
 		ease: FlxEase.cubeOut,
 	});
-	
-	if(curSong == 'renovation')
-		{
-	tween4 = FlxTween.tween(funnitext2, {x: 75}, 1, {
-		ease: FlxEase.cubeOut,
-	});
-    }
-    else if(curSong == 'multiversus')
-    {
-    tween4 = FlxTween.tween(funnitext2, {x: 50}, 1, {
-    ease: FlxEase.cubeOut,
-    });
-    }
-	else
-		{
-		tween4 = FlxTween.tween(funnitext2, {x: 100}, 1, {
+		tween4 = FlxTween.tween(funnitext2, {x: 10 + txtArtist[1]}, 1, {
 			ease: FlxEase.cubeOut,
 		});
-	}
+	
 	tween5 = FlxTween.tween(funnitext3, {x: 25}, 1, {
 		ease: FlxEase.cubeOut,
 	});
@@ -109,7 +100,7 @@ tween2 = FlxTween.tween(iconn, {x: 320}, 1, {
 	tween3 = FlxTween.tween(funnitext3, {x: 25}, 1, {
 		ease: FlxEase.cubeOut,
 	});
-	tween4 = FlxTween.tween(funnitext2, {x: 100}, 1, {
+	tween4 = FlxTween.tween(funnitext2, {x: 10 + txtArtist[1]}, 1, {
 		ease: FlxEase.cubeOut,
 	});
 	tween5 = FlxTween.tween(funnitext, {x: 50}, 1, {
@@ -118,6 +109,7 @@ tween2 = FlxTween.tween(iconn, {x: 320}, 1, {
 		}
 	}
 }
+
 function stepHit(curStep) {
 	if(curSong != 'fundament')
 		{
@@ -155,23 +147,10 @@ else
 		tween3 = FlxTween.tween(funnitext, {x: 50}, 1, {
 			ease: FlxEase.cubeOut,
 		});
-		if(curSong == 'renovation')
-			{
-		tween4 = FlxTween.tween(funnitext2, {x: 75}, 1, {
-			ease: FlxEase.cubeOut,
-		});
-		}
-		else if(curSong == 'multiversus')
-		{
-		tween4 = FlxTween.tween(funnitext2, {x: 50}, 1, {
-		ease: FlxEase.cubeOut,
-		});
-		}
-		else{
-			tween4 = FlxTween.tween(funnitext2, {x: 100}, 1, {
+			tween4 = FlxTween.tween(funnitext2, {x: 10 + txtArtist[1]}, 1, {
 				ease: FlxEase.cubeOut,
 			});
-		}
+		
 		tween5 = FlxTween.tween(funnitext3, {x: 25}, 1, {
 			ease: FlxEase.cubeOut,
 		});
@@ -183,7 +162,7 @@ else
 		tween3 = FlxTween.tween(funnitext3, {x: 25}, 1, {
 			ease: FlxEase.cubeOut,
 		});
-		tween4 = FlxTween.tween(funnitext2, {x: 100}, 1, {
+		tween4 = FlxTween.tween(funnitext2, {x: 10 + txtArtist[1]}, 1, {
 			ease: FlxEase.cubeOut,
 		});
 		tween5 = FlxTween.tween(funnitext, {x: 50}, 1, {

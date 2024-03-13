@@ -209,7 +209,7 @@ function update()
 		if (controls.BACK && fifigej)
 		{
             FlxG.sound.play(Paths.sound('cancelMenu'), 0.4);
-            FlxG.switchState(new ModState("GalleryChooseState"));
+            FlxG.switchState(new ModState("customs/GalleryChooseState"));
 		}
         
 		if ((controls.ACCEPT || controls.BACK) && !fifigej)

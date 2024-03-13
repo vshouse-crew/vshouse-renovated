@@ -91,20 +91,8 @@ function changestuff():Void {
 
 function update()
 	{
-        currentBarrierImage = FlxG.random.int(0,5);
 		if(currentBarrier == 18) {
-                        if(currentBarrierImage == 0)
-						FlxG.openURL("https://imgur.com/a/nbSTRue", "_blank");
-                        if(currentBarrierImage == 1)
-		       		 	FlxG.openURL("https://imgur.com/a/wBEMlpG", "_blank");
-                        if(currentBarrierImage == 2)
-						FlxG.openURL("https://imgur.com/wxdmGqx", "_blank");
-						if(currentBarrierImage == 3)
-						FlxG.openURL("https://imgur.com/KDiNpmD", "_blank");
-                        if(currentBarrierImage == 4)
-                        FlxG.openURL("https://imgur.com/DujdwXf", "_blank");
-                        if(currentBarrierImage == 5)
-                        FlxG.openURL("https://imgur.com/mxy19bp", "_blank");
+			barrierOpenImage();
 			barrierWarning();
 			currentBarrier = 0;
 			barrierShake = 0;
@@ -144,10 +132,10 @@ function update()
 		if (controls.ACCEPT && fifigej)
 		{
 			if (currentIndex == 0) {
-				FlxG.switchState(new ModState("GalleryConceptState"));
+				FlxG.switchState(new ModState("customs/gallery/GalleryConceptState"));
 			}
 			if (currentIndex == 1) {
-				FlxG.switchState(new ModState("GalleryMemesState"));
+				FlxG.switchState(new ModState("customs/gallery/GalleryMemesState"));
 			}
 		}
 

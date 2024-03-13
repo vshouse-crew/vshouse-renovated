@@ -34,6 +34,7 @@ import flixel.text.FlxText.FlxTextFormat;
 import flixel.text.FlxText.FlxTextFormatMarkerPair;
 import flixel.text.FlxText.FlxTextBorderStyle;
 import flixel.text.FlxText.FlxTextAlign;
+import funkin.backend.scripting.GlobalScript;
     
 var images:Array<FlxSprite>;
 var bg:FlxSprite;
@@ -314,23 +315,8 @@ function update(elapsed:Float)
 				{
 					FlxG.switchState(new PlayState());
 			}
-            currentBarrierImage = FlxG.random.int(0,6);
             if(currentBarrier == 18) {
-                if(currentBarrierImage == 0)
-                FlxG.openURL("https://imgur.com/a/nbSTRue", "_blank");
-                if(currentBarrierImage == 1)
-                FlxG.openURL("https://imgur.com/a/wBEMlpG", "_blank");
-                if(currentBarrierImage == 2)
-                FlxG.openURL("https://imgur.com/wxdmGqx", "_blank");
-                if(currentBarrierImage == 3)
-                FlxG.openURL("https://imgur.com/KDiNpmD", "_blank");
-                if(currentBarrierImage == 4)
-                FlxG.openURL("https://imgur.com/DujdwXf", "_blank");
-                if(currentBarrierImage == 5)
-                FlxG.openURL("https://imgur.com/mxy19bp", "_blank");
-                if(currentBarrierImage == 6)
-                FlxG.openURL("https://pastebin.com/raw/M7Dtq9Z6", "_blank");
-    
+				barrierOpenImage();
                 barrierWarning();
                 currentBarrier = 0;
                 barrierShake = 0;

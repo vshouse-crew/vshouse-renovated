@@ -6,10 +6,10 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 
 function postCreate() {
-	
-	black = new FlxSprite(leftArrow.x, leftArrow.y).makeGraphic(500, 100, 0xFF000000);
-	add(black);
-
+for(diffSprite in difficultySprites)
+	{
+		diffSprite.visible = false;
+	}
     leftArrow.visible = false;
 	rightArrow.visible = false;
 	

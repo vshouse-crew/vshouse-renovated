@@ -43,7 +43,7 @@ function onSelect(e) {
 	}
 	else
 	{
-		FlxG.switchState(new ModState("CharacterChooser"));
+		FlxG.switchState(new ModState("customs/CharacterChooser"));
 	}
 	e.cancel();
 }
