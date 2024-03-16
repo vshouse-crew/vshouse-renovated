@@ -29,7 +29,7 @@ function create()
 
 	function update(elapsed)
 		{
-			if(curSong == 'renovation' && !renovationcut && PlayState.isStoryMode) FlxG.switchState(new ModState("RenoWarningState"));
+			if(curSong == 'renovation' && !renovationcut && PlayState.isStoryMode) FlxG.switchState(new ModState("customs/RenoWarningState"));
 			if(inCutscene)
 				{
 					renovationcut = false;

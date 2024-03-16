@@ -8,17 +8,12 @@ var target = 0;
 
 function postCreate()
     {
+        xx = dad.getCameraPosition().x;
+        yy = dad.getCameraPosition().y;
+        xx2 = boyfriend.getCameraPosition().x;
+        yy2 = boyfriend.getCameraPosition().y;
+
         target = 0;
-        if(curSong == 'renovation')
-        {
-            yy = yy - 100;
-            yy2 = yy2 - 100;
-        }
-		if(curSong == 'fundament')
-			{
-				yy = yy - 100;
-				xx = xx + 50;
-			}
         camFollow.x = xx;
         camFollow.y = yy;
         trace(target);

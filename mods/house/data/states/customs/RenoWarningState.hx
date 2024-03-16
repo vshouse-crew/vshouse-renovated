@@ -41,7 +41,7 @@ import flixel.util.FlxAxes;
 
     }
 
-    override function update()
+    function update()
     {
             if (controls.ACCEPT) {
                 FlxG.switchState(new PlayState());

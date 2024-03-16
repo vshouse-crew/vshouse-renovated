@@ -12,6 +12,7 @@ if (FlxG.save.data.multiversusLock == null) FlxG.save.data.multiversusLock = 'lo
 }
 
 function preStateSwitch(){
+    window.title = "Vs House";
 	if (!initialized) {
 		initialized = true;
 		FlxG.game._requestedState = new ModState('customs/IntroState');

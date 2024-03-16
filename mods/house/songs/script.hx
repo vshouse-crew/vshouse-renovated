@@ -40,7 +40,7 @@ function create() {
 	bgThing.cameras = [camHUD];
 	add(bgThing);
 
-	if(curSong == 'Dispute') iconn = new FlxSprite(-750, 300).loadGraphic(Paths.image('watermark/icons/houseangy'));	
+	if(curSong == 'dispute') iconn = new FlxSprite(-750, 300).loadGraphic(Paths.image('watermark/icons/houseangy'));	
 	else if(curSong == 'renovation') iconn = new FlxSprite(-750, 300).loadGraphic(Paths.image('watermark/icons/housefury'));	
 	else if(curSong == 'fundament') iconn = new FlxSprite(-750, 300).loadGraphic(Paths.image('watermark/icons/house2d'));	
 	else if(curSong == 'multiversus') iconn = new FlxSprite(-750, 300).loadGraphic(Paths.image('watermark/icons/jake'));	
