@@ -21,7 +21,7 @@ function onPlayerMiss(e) {
 function onNoteCreation(e) {
     if(e.noteType == 'bullet_note')
         {
-            if (!PlayState.opponentMode && e.strumLineID <= 0) e.note.wasGoodHit = true;
+            e.note.wasGoodHit = true;
 				e.noteSprite = "game/notes/bullet";
 		}
 }

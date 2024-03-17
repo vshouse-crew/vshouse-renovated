@@ -202,14 +202,12 @@ function nextImage():Void {
 		currentIndexGF++;
 			}
         if (currentIndex >= images.length && selectingbf) {
-			trace('chujdużo');
                         FlxG.sound.play(Paths.sound('error'), 0.9);
                         FlxG.camera.shake(0.005, 0.15);
                         currentIndex = currentIndex - 1;
                         barrierImage();
         }
 		if (currentIndexGF >= images.length) {
-			trace('cipadużo');
 			FlxG.sound.play(Paths.sound('error'), 0.9);
 			FlxG.camera.shake(0.005, 0.15);
 			currentIndexGF = currentIndexGF - 1;
