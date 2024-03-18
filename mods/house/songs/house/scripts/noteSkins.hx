@@ -7,7 +7,6 @@ function postCreate(){
     accuracyTxt.visible = false;
     healthBar.createFilledBar(FlxColor.fromRGB(255, 0, 0), FlxColor.fromRGB(0, 255, 0));
     health = health + 0.01;
-    trace(boyfriend.icon);
 }
 
 function update(){
