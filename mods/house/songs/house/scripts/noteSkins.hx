@@ -26,3 +26,6 @@ function onPlayerHit(e)
     {
         e.showSplash = false;
     }
+function onDadHit(e){
+    e.strumGlowCancelled = true;
+}
