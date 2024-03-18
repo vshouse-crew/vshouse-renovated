@@ -1,12 +1,12 @@
 <!DOCTYPE codename-engine-stage>
 <stage folder="stages/oldhouse/" zoom="0.6">
-	<sprite x="-2300" y="-1400" sprite="Skye" scale="1.2" name="Skye"/>
-	<sprite x="500" y="-350" sprite="sun" name="sun"/>
-	<sprite x="-2530" y="500" sprite="Grass" scale="1.6" name="Grass"/>
-	<sprite x="-600" y="-450" sprite="Houses" scale="1.3" name="Houses"/>
-	<sprite x="-600" y="300" sprite="Mur" name="Mur"/>
-	<gf x="400" y="130"/>
-	<dad x="-29" y="198.5"/>
-	<bf x="1120" y="100"/>
+	<sprite x="-2300" sprite="Skye" y="-1400" scale="1.2" name="Skye"/>
+	<sprite x="500" name="sun" sprite="sun" y="-350"/>
+	<sprite x="-2530" sprite="Grass" y="500" scale="1.6" name="Grass"/>
+	<sprite x="-600" sprite="Houses" y="-450" scale="1.3" name="Houses"/>
+	<sprite x="-600" name="Mur" sprite="Mur" y="300"/>
+	<gf x="175" y="18"/>
+	<dad x="-357.5" y="85.5"/>
+	<bf x="813.5" y="-21"/>
 	<combo/>
 </stage>
