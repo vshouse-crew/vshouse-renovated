@@ -57,7 +57,7 @@ function create() {
 	funnitext.cameras = [camHUD];
 	add(funnitext);
 
-	funnitext2 = new FunkinText(-1050, 345, 0, curSong, 45, true);
+	funnitext2 = new FunkinText(-1050, 345, 0, curSong.substr(0, 1).toUpperCase() + curSong.substr(1), 45, true);
 	if(!downscroll)
 		{
 	funnitext2.y = 345;
